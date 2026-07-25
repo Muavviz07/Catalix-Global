@@ -1,124 +1,100 @@
 'use client';
 
-import { ArrowRight, ShieldCheck, Download, ChevronDown, Compass, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface HeroProps {
-  onOpenConsultation: (topic?: string) => void;
-  onOpenRoadmapModal: () => void;
+  onOpenConsultation: () => void;
 }
 
-export default function Hero({ onOpenConsultation, onOpenRoadmapModal }: HeroProps) {
+export default function Hero({ onOpenConsultation }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] pt-32 pb-20 flex items-center justify-center overflow-hidden bg-brand-cream border-b border-brand-navy/5">
-      {/* Refined Geometric Background Signature */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-35">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(#1A3A52 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #F7F5F0 0.75px)`,
-            backgroundSize: '30px 30px',
-            backgroundPosition: '0 0, 15px 15px',
-            opacity: 0.15,
-          }}
-        />
-        <svg
-          className="absolute top-0 right-0 w-full h-full max-w-4xl text-brand-navy/10"
-          viewBox="0 0 800 800"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="600" cy="200" r="350" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
-          <circle cx="600" cy="200" r="240" stroke="#D4AF37" strokeWidth="1" strokeOpacity="0.3" />
-          <path d="M 200,600 L 600,200" stroke="#D4AF37" strokeWidth="1.5" strokeOpacity="0.4" />
-          <rect x="450" y="350" width="120" height="120" stroke="currentColor" strokeWidth="1" transform="rotate(15 450 350)" />
-        </svg>
-      </div>
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-brand-cream border-b border-brand-navy/10 overflow-hidden">
+      {/* Background Subtle Grid Accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(#1A3A52_1px,transparent_1px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="max-w-4xl">
-          {/* Editorial Kicker */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-slate-light/60 border border-brand-navy/10 text-xs font-semibold tracking-wider text-brand-navy uppercase mb-6 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-brand-gold"></span>
-            <span>B2B Advisory & Enterprise Transformation</span>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl space-y-6">
+          {/* Kicker Label */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="inline-flex items-center gap-2 px-3 py-1 bg-brand-navy/5 border border-brand-navy/10 rounded-full text-xs font-semibold text-brand-navy uppercase tracking-wider"
+          >
+            <span className="w-2 h-2 rounded-full bg-brand-gold" />
+            <span>B2B ADVISORY & ENTERPRISE TRANSFORMATION</span>
+          </motion.div>
 
           {/* Headline */}
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.15] mb-6">
-            Transform Operations Through{' '}
-            <span className="relative inline-block text-brand-navy">
-              Intelligent Strategy
-              <span className="absolute bottom-1 left-0 w-full h-1 bg-brand-gold/60"></span>
-            </span>
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-navy leading-tight tracking-tight"
+          >
+            Drive Measurable Business Impact Through Intelligent Operations
+          </motion.h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-brand-text/90 font-normal leading-relaxed max-w-2.5xl mb-10">
-            Catalix Global advises C-suite leadership and operational executives on high-stakes CIO/CDO initiatives, ERP governance, and practical AI adoption to drive measurable bottom-line yield.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-base sm:text-lg text-brand-text/80 font-normal leading-relaxed max-w-2xl"
+          >
+            Strategic consulting for CIO/CDO leadership, ERP governance, and AI adoption to unlock enterprise value and working capital.
+          </motion.p>
 
           {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+          >
             <button
-              onClick={() => onOpenConsultation('Executive Strategy Session')}
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand-navy hover:bg-brand-navy-dark rounded-sm transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-brand-navy group"
+              onClick={onOpenConsultation}
+              className="inline-flex items-center justify-center px-7 py-4 bg-brand-navy hover:bg-brand-navy-dark text-white font-semibold text-sm uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-lg group"
             >
               <span>Schedule Consultation</span>
-              <ArrowRight className="w-5 h-5 ml-2.5 text-brand-gold group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 text-brand-gold group-hover:translate-x-1 transition-transform" />
             </button>
 
-            <button
-              onClick={onOpenRoadmapModal}
-              className="inline-flex items-center justify-center px-7 py-4 text-base font-semibold text-brand-navy bg-white hover:bg-brand-gold-light border border-brand-gold rounded-sm transition-all duration-300 shadow-xs hover:shadow-md hover:-translate-y-0.5 group"
+            <a
+              href="#services"
+              className="inline-flex items-center justify-center px-7 py-4 bg-white hover:bg-brand-cream text-brand-navy font-semibold text-sm uppercase tracking-wider rounded-sm border border-brand-navy/30 hover:border-brand-gold transition-all duration-300"
             >
-              <Download className="w-4 h-4 mr-2.5 text-brand-gold group-hover:scale-110 transition-transform" />
-              <span>Download AI Roadmap</span>
-            </button>
-          </div>
-
-          {/* Trust Indicators Bar - Fixed to Single Line per item */}
-          <div className="pt-8 border-t border-brand-navy/10 flex flex-wrap items-center justify-between gap-y-4 gap-x-6">
-            <div className="flex items-center gap-2.5 whitespace-nowrap">
-              <ShieldCheck className="w-4 h-4 text-brand-gold flex-shrink-0" />
-              <span className="text-xs font-semibold text-brand-navy tracking-wide uppercase">
-                CIO / CDO Governance
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2.5 whitespace-nowrap">
-              <Compass className="w-4 h-4 text-brand-gold flex-shrink-0" />
-              <span className="text-xs font-semibold text-brand-navy tracking-wide uppercase">
-                ERP Lifecycle Leadership
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2.5 whitespace-nowrap">
-              <div className="w-4 h-4 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-              </div>
-              <span className="text-xs font-semibold text-brand-navy tracking-wide uppercase">
-                Enterprise AI Frameworks
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2.5 whitespace-nowrap">
-              <TrendingUp className="w-4 h-4 text-brand-gold flex-shrink-0" />
-              <span className="text-xs font-semibold text-brand-navy tracking-wide uppercase">
-                EBITDA Yield Focused
-              </span>
-            </div>
-          </div>
+              <span>Explore Services</span>
+            </a>
+          </motion.div>
         </div>
-      </div>
 
-      {/* Scroll Down Prompt */}
-      <a
-        href="#services"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-xs font-medium text-brand-text/60 hover:text-brand-navy transition-colors"
-        aria-label="Scroll to services"
-      >
-        <span>EXPLORE SERVICES</span>
-        <ChevronDown className="w-4 h-4 animate-bounce text-brand-gold" />
-      </a>
+        {/* Trust Indicators Bar (Bottom) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 pt-8 border-t border-brand-navy/10 flex flex-wrap items-center justify-between gap-4 text-xs font-semibold text-brand-navy/80"
+        >
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+            <span>CIO / CDO Governance</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+            <span>ERP Lifecycle Leadership</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+            <span>Enterprise AI Frameworks</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+            <span>EBITDA Yield Focused</span>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

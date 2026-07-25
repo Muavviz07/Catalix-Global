@@ -3,91 +3,57 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Outcomes from '@/components/Outcomes';
-import WhyUs from '@/components/WhyUs';
+import ServicesOverview from '@/components/ServicesOverview';
+import ImpactHighlights from '@/components/ImpactHighlights';
+import GeneralEstimator from '@/components/GeneralEstimator';
+import WhyChooseCatalyx from '@/components/WhyChooseCatalyx';
 import AIAdvisorySection from '@/components/AIAdvisorySection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import ChatbotWidget from '@/components/ChatbotWidget';
 import ConsultationModal from '@/components/ConsultationModal';
 import AIRoadmapModal from '@/components/AIRoadmapModal';
-import ChatbotWidget from '@/components/ChatbotWidget';
 
-export default function Home() {
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
-  const [consultationTopic, setConsultationTopic] = useState('Executive Consultation');
-  const [isRoadmapOpen, setIsRoadmapOpen] = useState(false);
+export default function HomePage() {
+  const [consultationOpen, setConsultationOpen] = useState(false);
+  const [roadmapOpen, setRoadmapOpen] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState('Executive Consultation');
 
   const handleOpenConsultation = (topic?: string) => {
-    if (topic) setConsultationTopic(topic);
-    setIsConsultationOpen(true);
-  };
-
-  const handleCloseConsultation = () => {
-    setIsConsultationOpen(false);
-  };
-
-  const handleOpenRoadmap = () => {
-    setIsRoadmapOpen(true);
-  };
-
-  const handleCloseRoadmap = () => {
-    setIsRoadmapOpen(false);
+    if (topic) setSelectedTopic(topic);
+    setConsultationOpen(true);
   };
 
   return (
-    <main className="min-h-screen bg-brand-cream text-brand-text flex flex-col font-sans selection:bg-brand-gold/30 selection:text-brand-navy relative">
-      {/* Sticky Header Navigation */}
+    <div className="min-h-screen bg-brand-cream text-brand-navy selection:bg-brand-gold selection:text-brand-navy">
+      {/* Sticky Header */}
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      {/* Hero Section */}
-      <Hero
-        onOpenConsultation={handleOpenConsultation}
-        onOpenRoadmapModal={handleOpenRoadmap}
-      />
+      {/* Main Homepage Flow */}
+      <main>
+        <Hero onOpenConsultation={() => handleOpenConsultation('Executive Consultation')} />
+        <ServicesOverview />
+        <ImpactHighlights />
+        <GeneralEstimator onOpenConsultation={handleOpenConsultation} />
+        <WhyChooseCatalyx onOpenConsultation={handleOpenConsultation} />
+        <AIAdvisorySection
+          onOpenConsultation={handleOpenConsultation}
+          onOpenRoadmap={() => setRoadmapOpen(true)}
+        />
+        <CTASection onOpenConsultation={handleOpenConsultation} />
+      </main>
 
-      {/* 1. Services Overview Section */}
-      <Services onOpenConsultation={handleOpenConsultation} />
-
-      {/* 2. Business Outcomes Section */}
-      <Outcomes onOpenConsultation={handleOpenConsultation} />
-
-      {/* 3. Why Catalix Section */}
-      <WhyUs onOpenConsultation={handleOpenConsultation} />
-
-      {/* Dedicated AI Governance Section */}
-      <AIAdvisorySection
-        onOpenConsultation={handleOpenConsultation}
-        onOpenRoadmapModal={handleOpenRoadmap}
-      />
-
-      {/* 4. Call-to-Action / Contact Section */}
-      <CTASection
-        onOpenConsultation={handleOpenConsultation}
-        onOpenRoadmapModal={handleOpenRoadmap}
-      />
-
-      {/* 5. Footer Section */}
+      {/* Footer */}
       <Footer />
 
-      {/* Chatbot Widget (Floating at Right Bottom) */}
-      <ChatbotWidget
-        onOpenConsultation={handleOpenConsultation}
-        onOpenRoadmapModal={handleOpenRoadmap}
-      />
-
-      {/* Consultation Modal Dialog */}
+      {/* Interactive Overlays */}
+      <ChatbotWidget onOpenConsultation={handleOpenConsultation} />
       <ConsultationModal
-        isOpen={isConsultationOpen}
-        onClose={handleCloseConsultation}
-        initialTopic={consultationTopic}
+        isOpen={consultationOpen}
+        onClose={() => setConsultationOpen(false)}
+        initialTopic={selectedTopic}
       />
-
-      {/* AI Roadmap Briefing Download Modal */}
-      <AIRoadmapModal
-        isOpen={isRoadmapOpen}
-        onClose={handleCloseRoadmap}
-      />
-    </main>
+      <AIRoadmapModal isOpen={roadmapOpen} onClose={() => setRoadmapOpen(false)} />
+    </div>
   );
 }

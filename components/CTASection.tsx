@@ -1,10 +1,10 @@
 'use client';
 
-import { ArrowRight, Sparkles, Compass } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface CTASectionProps {
   onOpenConsultation: (topic?: string) => void;
-  onOpenRoadmapModal: () => void;
+  onOpenRoadmapModal?: () => void;
 }
 
 export default function CTASection({
@@ -12,55 +12,60 @@ export default function CTASection({
   onOpenRoadmapModal,
 }: CTASectionProps) {
   return (
-    <section className="py-24 bg-brand-navy text-white relative overflow-hidden">
-      {/* Decorative Gold Radial Glow Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative py-24 bg-brand-navy text-white overflow-hidden border-t-2 border-brand-gold">
+      {/* Background Radial Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-brand-gold/30 text-xs font-semibold tracking-wider text-brand-gold uppercase mb-6">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>START THE CONVERSATION</span>
-        </div>
-
-        <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight">
-          Let&apos;s Catalyse Your Transformation
-        </h2>
-
-        <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto mb-10">
-          Schedule a confidential discovery session with a Catalix Managing Partner to evaluate your technology architecture, ERP roadmap, or AI governance priorities.
-        </p>
-
-        {/* Dual Buttons: Side-by-side Desktop, Stacked Mobile */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => onOpenConsultation('Executive Transformation Session')}
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-brand-navy bg-white hover:bg-brand-gold-light rounded-sm transition-all duration-300 shadow-xl hover:-translate-y-0.5 group"
-          >
-            <span>Schedule Consultation</span>
-            <ArrowRight className="w-5 h-5 ml-2.5 text-brand-navy group-hover:translate-x-1 transition-transform" />
-          </button>
-
-          <button
-            onClick={onOpenRoadmapModal}
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-brand-gold bg-transparent hover:bg-white/5 border border-brand-gold rounded-sm transition-all duration-300 hover:-translate-y-0.5 group"
-          >
-            <Compass className="w-4 h-4 mr-2.5 text-brand-gold group-hover:rotate-45 transition-transform" />
-            <span>Explore AI Advisory</span>
-          </button>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 text-xs text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>Direct Partner Engagement</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
+          {/* Kicker */}
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-gold uppercase tracking-wider bg-white/5 px-3 py-1 rounded-full border border-brand-gold/30">
+            <Sparkles className="w-4 h-4 text-brand-gold" />
+            <span>START THE CONVERSATION</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>Zero Vendor Bias</span>
+
+          {/* Headline */}
+          <h2 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+            Let&apos;s Catalyse Your Transformation
+          </h2>
+
+          {/* Subheading */}
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+            Schedule a confidential discovery session with a Catalix Managing Partner to evaluate your technology architecture, ERP roadmap, or AI governance priorities.
+          </p>
+
+          {/* Dual CTAs */}
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => onOpenConsultation('Partner Discovery Session')}
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-brand-cream text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all duration-300 shadow-lg hover:shadow-xl group"
+            >
+              <span>Schedule Consultation</span>
+              <ArrowRight className="w-4 h-4 ml-2 text-brand-gold group-hover:translate-x-1 transition-transform" />
+            </button>
+
+            <button
+              onClick={onOpenRoadmapModal || (() => onOpenConsultation('AI Advisory Overview'))}
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white/10 text-brand-gold font-bold text-xs uppercase tracking-wider rounded-sm border border-brand-gold transition-all duration-300"
+            >
+              <span>Explore AI Advisory</span>
+            </button>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-            <span>NDA Protected Confidentiality</span>
+
+          {/* Trust Guarantees Bar (Bottom) */}
+          <div className="pt-12 flex flex-wrap items-center justify-center gap-8 text-xs text-slate-300 border-t border-white/10 mt-8">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+              <span>Direct Partner Engagement</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+              <span>Zero Vendor Bias</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+              <span>NDA Protected Confidentiality</span>
+            </div>
           </div>
         </div>
       </div>
