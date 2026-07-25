@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import ServicesOverview from '@/components/ServicesOverview';
+import Services from '@/components/Services';
 import ImpactHighlights from '@/components/ImpactHighlights';
 import GeneralEstimator from '@/components/GeneralEstimator';
 import WhyChooseCatalyx from '@/components/WhyChooseCatalyx';
@@ -32,7 +32,7 @@ export default function HomePage() {
       {/* Main Homepage Flow */}
       <main>
         <Hero onOpenConsultation={() => handleOpenConsultation('Executive Consultation')} />
-        <ServicesOverview />
+        <Services onOpenConsultation={handleOpenConsultation} />
         <ImpactHighlights />
         <GeneralEstimator onOpenConsultation={handleOpenConsultation} />
         <WhyChooseCatalyx onOpenConsultation={handleOpenConsultation} />
