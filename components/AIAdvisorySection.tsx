@@ -12,7 +12,7 @@ export default function AIAdvisorySection({
   onOpenRoadmap,
 }: AIAdvisorySectionProps) {
   return (
-    <section id="ai-advisory" className="py-24 bg-brand-cream border-b border-brand-gold/30">
+    <section id="ai-advisory" className="py-24 bg-white border-b border-brand-navy/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 space-y-3">
@@ -97,7 +97,7 @@ export default function AIAdvisorySection({
           </div>
 
           {/* Right Column: AI Roadmap Preview Card */}
-          <div className="lg:col-span-5 bg-white p-8 rounded-sm border border-brand-gold/40 shadow-xl space-y-6">
+          <div className="lg:col-span-5 bg-brand-cream/50 p-8 rounded-sm border border-brand-gold/40 shadow-xl space-y-6">
             <div className="pb-4 border-b border-brand-navy/10 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-brand-gold" />
@@ -105,7 +105,7 @@ export default function AIAdvisorySection({
                   2026 Executive AI Blueprint
                 </h3>
               </div>
-              <span className="text-[10px] font-mono font-bold text-brand-gold uppercase bg-brand-cream px-2 py-1 rounded-xs border border-brand-gold/30">
+              <span className="text-[10px] font-mono font-bold text-brand-gold uppercase bg-white px-2 py-1 rounded-xs border border-brand-gold/30">
                 PDF BRIEFING
               </span>
             </div>
