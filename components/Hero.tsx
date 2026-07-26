@@ -38,7 +38,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Editorial Kicker */}
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-cream/90 border border-brand-navy/10 text-xs font-semibold tracking-wider text-brand-navy uppercase mb-6 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-brand-gold" />
-            <span>B2B ADVISORY & ENTERPRISE TRANSFORMATION</span>
+            <span>Fractional CIO · CDO · AI Advisory</span>
           </div>
 
           {/* Headline */}
