@@ -10,7 +10,6 @@ import WhyChooseCatalyx from '@/components/WhyChooseCatalyx';
 import AIAdvisorySection from '@/components/AIAdvisorySection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
-import ChatbotWidget from '@/components/ChatbotWidget';
 import ConsultationModal from '@/components/ConsultationModal';
 import AIRoadmapModal from '@/components/AIRoadmapModal';
 
@@ -47,7 +46,6 @@ export default function HomePage() {
       <Footer />
 
       {/* Interactive Overlays */}
-      <ChatbotWidget onOpenConsultation={handleOpenConsultation} />
       <ConsultationModal
         isOpen={consultationOpen}
         onClose={() => setConsultationOpen(false)}

@@ -51,6 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
+import ChatbotWidget from '@/components/ChatbotWidget';
+
 export default function RootLayout({
   children,
 }: {
@@ -72,6 +74,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <ChatbotWidget />
       </body>
     </html>
   );
