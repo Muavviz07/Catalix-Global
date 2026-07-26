@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ConsultationModal from '@/components/ConsultationModal';
 import { BusinessSystemData } from '@/data/siteData';
-import { Database, Server, Users, BarChart, Boxes, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Database, Server, Users, BarChart, Boxes, CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const iconMap = { Database, Server, Users, BarChart, Boxes };
 
@@ -175,23 +175,78 @@ export default function BusinessSystemDetailClient({
           </div>
         </section>
 
-        {/* 5. System CTA */}
-        <section className="py-20 bg-brand-navy text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 className="font-serif font-bold text-3xl sm:text-4xl text-white">
-              {system.title} Advisory & Steering
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto">
-              Schedule a confidential discovery session to evaluate your platform architecture, vendor SOWs, or migration roadmap.
-            </p>
+        {/* 5. Executive Platform CTA Banner */}
+        <section className="py-24 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">
+          {/* Subtle Radial Glow & Background Grid */}
+          <div className="absolute top-1/2 right-10 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-            <div>
-              <button
-                onClick={() => handleOpenConsultation(`${system.title} Implementation Steering`)}
-                className="px-8 py-4 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md"
-              >
-                Schedule {system.title} Consultation
-              </button>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              {/* Left Column (7-cols) */}
+              <div className="lg:col-span-7 space-y-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-brand-gold/30 text-xs font-mono font-bold text-brand-gold uppercase tracking-wider shadow-xs">
+                  <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
+                  <span>PLATFORM ARCHITECTURE BRIEFING • MANAGING PARTNER LED</span>
+                </div>
+
+                <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+                  {system.title} Advisory & Steering
+                </h2>
+
+                <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                  Schedule a confidential discovery session to evaluate your {system.title} architecture, vendor implementation SOWs, module customization, and cloud migration roadmaps.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                  <div className="flex items-center gap-2.5 text-xs text-slate-200 font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                    <span>Vendor SOW & Licensing Audit</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-slate-200 font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                    <span>100% Client P&L Aligned</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-xs text-slate-200 font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                    <span>Independent SI Governance</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column (5-cols): Floating Action Card */}
+              <div className="lg:col-span-5">
+                <div className="bg-brand-navy/90 p-8 sm:p-10 rounded-sm border border-brand-gold/40 shadow-2xl backdrop-blur-md space-y-6 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl pointer-events-none" />
+
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold text-brand-gold uppercase tracking-wider block">
+                      PLATFORM STEERING BRIEFING
+                    </span>
+                    <h3 className="font-serif font-bold text-2xl text-white">
+                      Request Platform Audit
+                    </h3>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      Connect directly with enterprise architects and certified {system.title} steering advisors.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-2">
+                    <button
+                      onClick={() => handleOpenConsultation(`${system.title} Implementation Steering`)}
+                      className="w-full py-4 px-6 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md flex items-center justify-center gap-2 group/btn"
+                    >
+                      <span>Schedule {system.title} Consultation</span>
+                      <ArrowRight className="w-4 h-4 text-brand-navy group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
+
+                    <div className="flex items-center justify-center gap-2 text-[10px] font-mono text-slate-400">
+                      <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" />
+                      <span>Protected under mutual enterprise NDA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

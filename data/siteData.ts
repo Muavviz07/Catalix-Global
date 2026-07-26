@@ -26,7 +26,7 @@ export interface ServiceData {
     output2Unit: string;
     type: 'cio' | 'erp' | 'digital' | 'operational' | 'ai';
   };
-  relatedSectors: string[]; // sector slugs
+  relatedSectors: string[]; // exactly 4 sector slugs
   relatedServices: string[]; // service slugs
 }
 
@@ -120,7 +120,7 @@ export const servicesData: ServiceData[] = [
       output2Unit: '$M',
       type: 'cio',
     },
-    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
+    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals'],
     relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory']
   },
   {
@@ -165,7 +165,7 @@ export const servicesData: ServiceData[] = [
       output2Unit: '$M',
       type: 'erp',
     },
-    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
+    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'distribution-trading'],
     relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence']
   },
   {
@@ -255,7 +255,7 @@ export const servicesData: ServiceData[] = [
       output2Unit: '$M',
       type: 'operational',
     },
-    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
+    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'petrochemicals', 'distribution-trading'],
     relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory']
   },
   {
@@ -287,7 +287,7 @@ export const servicesData: ServiceData[] = [
       { title: 'Data Infrastructure Readiness Audit', description: 'Cleanse and structure ERP, CRM, and OT data pipelines to feed AI contextual models.' },
       { title: 'High-ROI Agentic Use Cases Matrix', description: 'Targeting high-impact automation in demand planning, quality telemetry, and vendor auditing.' },
       { title: 'Manufacturing AI Pilots & Agent Workflows', description: 'Deploying controlled AI agents that automate complex operational decision loops.' },
-      { title: 'CFO Guide to AI Capex & ROI Metrics', description: 'Rigorously evaluating AI software licensing vs measurable EBITDA returns.' }
+      { title: 'CFO Guide to AI Capex & Return Metrics', description: 'Rigorously evaluating AI software licensing vs measurable EBITDA returns.' }
     ],
     estimator: {
       title: 'Estimate AI Adoption Readiness & Value Unlock',
@@ -300,7 +300,7 @@ export const servicesData: ServiceData[] = [
       output2Unit: '%',
       type: 'ai',
     },
-    relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
+    relatedSectors: ['fmcg', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
     relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence']
   }
 ];
