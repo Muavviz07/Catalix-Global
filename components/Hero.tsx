@@ -43,16 +43,16 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
           {/* Headline */}
           <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.15] mb-6">
-            Drive Measurable Business Impact Through{' '}
+            Catalysing Intelligent{' '}
             <span className="relative inline-block text-brand-navy">
-              Intelligent Operations
+              Enterprise Transformation
               <span className="absolute bottom-1 left-0 w-full h-1 bg-brand-gold/60"></span>
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-brand-text/90 font-normal leading-relaxed max-w-2.5xl mb-10">
-            Strategic consulting for CIO/CDO leadership, ERP governance, and AI adoption to unlock enterprise value.
+            We give manufacturing and industrial businesses the technology leadership, ERP discipline, and AI judgment of a full executive team — without the full-time overhead.
           </p>
 
           {/* Dual CTAs */}
