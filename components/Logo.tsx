@@ -80,16 +80,16 @@ export default function Logo({
     <div className="flex items-center gap-2.5 select-none">
       <LogoIcon className={iconSizes[size]} />
       {!iconOnly && (
-        <div className="flex flex-col justify-center -space-y-0.5 leading-none">
+        <div className="flex flex-col justify-center leading-none">
           {/* Top Word: CATALIX */}
           <span
             className={`font-serif font-bold tracking-wider ${textColor} ${textSizes[size]} leading-none`}
           >
             CATALIX
           </span>
-          {/* Bottom Word: GLOBAL (Stacked tightly 1 above and 1 below with minimal clean gap) */}
+          {/* Bottom Word: GLOBAL (Extremely tight vertical gap) */}
           <span
-            className={`font-serif font-bold tracking-wider text-brand-gold ${textSizes[size]} leading-none`}
+            className={`font-serif font-bold tracking-wider text-brand-gold ${textSizes[size]} leading-none -mt-1.5`}
           >
             GLOBAL
           </span>
