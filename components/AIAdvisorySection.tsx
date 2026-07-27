@@ -12,12 +12,12 @@ export default function AIAdvisorySection({
   onOpenRoadmap,
 }: AIAdvisorySectionProps) {
   return (
-    <section id="ai-advisory" className="py-24 bg-white border-b border-brand-navy/10">
+    <section id="ai-advisory" className="py-16 lg:py-20 bg-white border-b border-brand-navy/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-16 space-y-3">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-gold uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+        <div className="max-w-3xl mb-10 space-y-3">
+          <div className="flex items-center gap-2 text-sm font-mono font-bold tracking-widest text-brand-gold uppercase">
+            <span className="w-2 h-2 rounded-full bg-brand-gold" />
             <span>SPECIALIZED PRACTICE AREA</span>
           </div>
           <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-navy">

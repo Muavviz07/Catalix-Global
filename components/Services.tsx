@@ -61,59 +61,61 @@ const services = [
     id: 'digital-transformation',
     number: '03',
     title: 'Digital Transformation',
-    subtitle: 'Smart Factory & Shop-Floor Digitization',
+    subtitle: 'Modernizing Business Operations',
     icon: Compass,
-    tagline: 'Build pragmatic Industry 4.0 roadmaps connecting plant floor to C-suite.',
+    tagline: 'End-to-end digital evolution connecting shop floor to boardroom.',
     description:
-      'We design digital transformation roadmaps and lifecycle execution services that digitize factory floors, automate processes, and track real-time KPIs.',
+      'Aligning cloud infrastructure, legacy system modernization, and enterprise data architecture to drive operational agility.',
     deliverables: [
-      'Industry 4.0 Transformation Roadmap',
-      'Smart Factory & Automation Assessments',
-      'MES Strategy & AI Opportunity Audits',
-      'Shop-Floor Digitization & Telemetry',
-      'Real-Time KPI & Operations Frameworks',
+      'Enterprise Digital Maturity Assessment',
+      'Cloud Architecture & Migration Strategy',
+      'Data Governance & Analytics Strategy',
+      'Legacy System Modernization Roadmap',
+      'Change Management & User Adoption',
     ],
-    impact: 'Drives end-to-end operational visibility and agility.',
+    impact: 'Accelerates time-to-market & improves customer engagement.',
   },
   {
     id: 'operational-excellence',
     number: '04',
     title: 'Operational Excellence',
-    subtitle: 'Technology-Driven Productivity',
+    subtitle: 'Process & Yield Optimization',
     icon: TrendingUp,
-    tagline: 'Leverage IT and digital tools to unlock plant capacity and EBITDA yield.',
+    tagline: 'Maximizing capacity, OEE yield, and working capital velocity.',
     description:
-      'We guide clients on how to deploy digital tools to eliminate inventory buffers, boost machine throughput, and stabilize production scheduling.',
+      'Deep operational diagnostics across supply chain, shop-floor MES, and warehouse management to eliminate waste and boost margin performance.',
     deliverables: [
-      'Reduce Inventory & Holding Overhead',
-      'Improve OEE & Machine Utilization',
-      'Optimize S&OP & Production Scheduling',
-      'Improve Inline Quality Management',
-      'Reduce Downtime & Unplanned Outages',
+      'Supply Chain & WMS Optimization',
+      'Shop Floor MES & OEE Improvement',
+      'Inventory Reduction & Working Capital',
+      'S&OP Planning Process Redesign',
+      'Quality Management Systems (QMS)',
     ],
-    impact: 'Unlocks cash flow and boosts overall plant OEE by 8-14%.',
+    impact: 'Reduces operating costs & improves throughput margins.',
   },
   {
     id: 'ai-advisory',
     number: '05',
     title: 'AI Advisory',
-    subtitle: 'Pragmatic & Secure AI Integration',
+    subtitle: 'Practical Enterprise AI Adoption',
     icon: Cpu,
-    tagline: 'Use AI as a business value driver, not an expensive tech experiment.',
+    tagline: 'Pragmatic AI governance, agentic automation, and LLM deployment.',
     description:
-      'We guide leadership on integrating artificial intelligence as a practical business tool—prioritizing high-ROI use cases, data security, and governance.',
+      'Navigating enterprise AI adoption with secure frameworks, high-ROI use cases, and robust data pipelines for manufacturing and B2B enterprises.',
     deliverables: [
-      'Enterprise AI Strategy & Roadmap',
-      'C-Suite AI Use-Case Prioritization',
-      'Manufacturing AI Pilots & Workflow Automation',
-      'AI Data Security & Governance Frameworks',
+      'Enterprise AI Readiness & Opportunity Audit',
+      'Secure LLM Architecture & IP Protection',
+      'Agentic Process Automation Workflows',
+      'AI Governance, Policy & Risk Frameworks',
+      'Custom Generative AI Proof of Concepts',
     ],
-    impact: 'Transforms AI experimentation into bottom-line returns.',
+    impact: 'Unlocks high-ROI automation while maintaining IP security.',
   },
 ];
 
 export default function Services({ onOpenConsultation }: ServicesProps) {
   const [activeTab, setActiveTab] = useState(0);
+
   const activeService = services[activeTab];
   const ActiveIcon = activeService.icon;
 
@@ -126,28 +128,26 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
   };
 
   return (
-    <section id="services" className="py-24 bg-white border-b border-brand-navy/5">
+    <section id="services" className="py-10 lg:py-14 bg-white border-b border-brand-navy/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-brand-navy/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-5 border-b border-brand-navy/10">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-gold uppercase mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-brand-gold/15 border border-brand-gold/30 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-3">
+              <span className="w-2 h-2 rounded-full bg-brand-gold" />
               <span>STRATEGIC PRACTICE AREAS</span>
             </div>
             <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-navy">
               What We Do
             </h2>
           </div>
-          <p className="text-base text-brand-text/80 font-normal max-w-md mt-4 md:mt-0">
+          <p className="text-base sm:text-lg text-brand-navy/90 font-medium max-w-md mt-4 md:mt-0 leading-relaxed">
             Independent, executive-level consulting designed to steer high-stakes digital and technology evolutions.
           </p>
         </div>
 
-        {/* 1. Practice Selector: Desktop vs Mobile UX */}
-        
-        {/* Desktop Selector Bar (Hidden on Mobile) */}
-        <div className="hidden md:flex items-center gap-2 overflow-x-auto pb-4 mb-10 scrollbar-none">
+        {/* 1. Practice Selector: 5-Column Non-Scrolling Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-5 gap-2 mb-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isActive = activeTab === index;
@@ -155,29 +155,28 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
               <button
                 key={service.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-sm text-xs font-semibold whitespace-nowrap transition-all duration-300 border ${
+                className={`flex items-center justify-center gap-2 px-3 py-3.5 rounded-sm text-xs xl:text-sm font-bold transition-all duration-300 border text-center ${
                   isActive
-                    ? 'bg-brand-navy text-white border-brand-navy shadow-md'
-                    : 'bg-brand-cream/60 text-brand-navy border-brand-navy/10 hover:border-brand-gold/60 hover:bg-white'
+                    ? 'bg-brand-navy text-white border-brand-navy shadow-md scale-[1.02]'
+                    : 'bg-brand-cream/60 text-brand-navy border-brand-navy/15 hover:border-brand-gold hover:bg-white'
                 }`}
               >
                 <span
-                  className={`text-[10px] font-mono px-1.5 py-0.5 rounded-xs ${
+                  className={`text-xs font-mono px-1.5 py-0.5 rounded-xs flex-shrink-0 ${
                     isActive ? 'bg-brand-gold text-brand-navy font-bold' : 'text-brand-gold'
                   }`}
                 >
                   {service.number}
                 </span>
-                <Icon className={`w-4 h-4 ${isActive ? 'text-brand-gold' : 'text-brand-navy'}`} />
-                <span>{service.title}</span>
+                <Icon className={`w-4 h-4 flex-shrink-0 ${isActive ? 'text-brand-gold' : 'text-brand-navy'}`} />
+                <span className="truncate">{service.title}</span>
               </button>
             );
           })}
         </div>
 
-        {/* Premium Mobile Practice Controller (Mobile Only: < md) */}
-        <div className="block md:hidden mb-8 space-y-3">
-          {/* Mobile Controller Bar: Counter + Prev/Next Taps */}
+        {/* Premium Mobile Practice Controller */}
+        <div className="block md:hidden mb-6 space-y-3">
           <div className="flex items-center justify-between bg-brand-navy p-3 rounded-md text-white shadow-sm border border-brand-gold/30">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
@@ -189,7 +188,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
             <div className="flex items-center gap-2">
               <button
                 onClick={handlePrev}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors active:bg-brand-gold active:text-brand-navy"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"
                 aria-label="Previous practice"
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
@@ -198,7 +197,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
 
               <button
                 onClick={handleNext}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-brand-gold text-brand-navy text-xs font-bold transition-colors active:bg-brand-gold-hover shadow-xs"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-brand-gold text-brand-navy text-xs font-bold transition-colors shadow-xs"
                 aria-label="Next practice"
               >
                 <span>Next</span>
@@ -208,7 +207,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
           </div>
 
           {/* 5-Node Segmented Touch Matrix */}
-          <div className="grid grid-cols-5 gap-1.5 p-1 bg-brand-cream/80 rounded-md border border-brand-navy/10">
+          <div className="grid grid-cols-5 gap-1.5 p-1.5 bg-brand-cream/80 rounded-md border border-brand-navy/10">
             {services.map((service, index) => {
               const Icon = service.icon;
               const isActive = activeTab === index;
@@ -223,7 +222,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
                   }`}
                 >
                   <Icon className={`w-4 h-4 mb-0.5 ${isActive ? 'text-brand-gold' : 'text-brand-navy/60'}`} />
-                  <span className="text-[9px] font-mono tracking-tight">{service.number}</span>
+                  <span className="text-[10px] font-mono tracking-tight font-bold">{service.number}</span>
                 </button>
               );
             })}
@@ -231,7 +230,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
         </div>
 
         {/* 2. Spotlight Stage Showcase Card */}
-        <div className="bg-brand-cream/50 rounded-sm border border-brand-gold/30 p-6 sm:p-12 mb-10 shadow-lg relative overflow-hidden">
+        <div className="bg-brand-cream/50 rounded-sm border border-brand-gold/30 p-6 sm:p-10 mb-8 shadow-lg relative overflow-hidden">
           {/* Background Accent */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -245,10 +244,10 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center"
             >
               {/* Left Column: Practice Overview */}
-              <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-sm bg-brand-navy text-brand-gold flex items-center justify-center shadow-md">
-                    <ActiveIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-sm bg-brand-navy text-brand-gold flex items-center justify-center shadow-md">
+                    <ActiveIcon className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-brand-gold uppercase tracking-wider block">
@@ -264,21 +263,21 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
                   &ldquo;{activeService.tagline}&rdquo;
                 </p>
 
-                <p className="text-sm sm:text-base text-brand-text/90 leading-relaxed">
+                <p className="text-sm sm:text-base text-brand-navy/90 leading-relaxed font-normal">
                   {activeService.description}
                 </p>
 
-                <div className="p-3.5 sm:p-4 bg-white/80 rounded-sm border border-brand-navy/10 text-xs text-brand-navy flex items-center gap-2">
+                <div className="p-4 bg-white/90 rounded-sm border border-brand-navy/10 text-xs text-brand-navy flex items-center gap-2.5">
                   <Sparkles className="w-4 h-4 text-brand-gold flex-shrink-0" />
                   <span>
-                    <strong className="text-brand-navy">Business Impact:</strong> {activeService.impact}
+                    <strong className="text-brand-navy font-bold">Business Impact:</strong> {activeService.impact}
                   </span>
                 </div>
 
                 <div className="pt-2">
                   <button
                     onClick={() => onOpenConsultation(activeService.title)}
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-brand-navy hover:bg-brand-navy-dark text-white font-semibold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md group"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-brand-navy hover:bg-brand-navy-dark text-white font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md group"
                   >
                     <span>Request {activeService.title} Overview</span>
                     <ArrowRight className="w-4 h-4 ml-2 text-brand-gold group-hover:translate-x-1 transition-transform" />
@@ -288,42 +287,34 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
 
               {/* Right Column: Key Deliverables List Card */}
               <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded-sm border border-brand-navy/10 shadow-sm space-y-4">
-                <div className="pb-3 border-b border-brand-navy/10 flex items-center justify-between">
-                  <h4 className="font-serif font-bold text-base sm:text-lg text-brand-navy">
-                    Key Practice Deliverables
-                  </h4>
-                  <span className="text-[10px] font-mono font-bold text-brand-gold uppercase bg-brand-cream px-2 py-1 rounded-xs border border-brand-gold/30">
-                    EXECUTIVE AUDIT
+                <div className="flex items-center justify-between border-b border-brand-navy/10 pb-3">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-brand-gold" />
+                    <h4 className="font-serif font-bold text-base text-brand-navy">
+                      Core Strategic Deliverables
+                    </h4>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-brand-navy/70 uppercase">
+                    P&L ALIGNED
                   </span>
                 </div>
 
-                <ul className="space-y-2.5 sm:space-y-3">
+                <ul className="space-y-3 text-xs text-brand-navy font-medium">
                   {activeService.deliverables.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-brand-navy/90">
+                    <li key={idx} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-brand-gold flex-shrink-0 mt-0.5" />
-                      <span className="leading-snug font-medium">{item}</span>
+                      <span className="leading-snug text-brand-navy/90">{item}</span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="pt-2 border-t border-brand-navy/10 flex items-center justify-between text-[11px] text-brand-navy/80">
+                  <span>Executive Engagement Model</span>
+                  <span className="font-bold text-brand-gold">Managing Partner Oversight</span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        {/* Executive Guarantee Note */}
-        <div className="bg-brand-cream/30 rounded-sm p-5 sm:p-6 border border-brand-navy/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-text/80">
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="w-5 h-5 text-brand-gold flex-shrink-0" />
-            <span>
-              All advisory practice engagements are led directly by <strong>Catalix Global Managing Partners</strong> with zero vendor bias and full NDA protected confidentiality.
-            </span>
-          </div>
-          <button
-            onClick={() => onOpenConsultation('General Advisory Inquiry')}
-            className="flex-shrink-0 font-semibold text-brand-navy hover:text-brand-gold transition-colors underline underline-offset-4"
-          >
-            Schedule Partner Inquiry
-          </button>
         </div>
       </div>
     </section>

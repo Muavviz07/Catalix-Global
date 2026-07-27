@@ -7,7 +7,7 @@ interface LogoProps {
   variant?: 'light' | 'dark';
 }
 
-export function LogoIcon({ className = "w-9 h-9" }: { className?: string }) {
+export function LogoIcon({ className = "w-10 h-10" }: { className?: string }) {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg
@@ -16,34 +16,34 @@ export function LogoIcon({ className = "w-9 h-9" }: { className?: string }) {
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full text-brand-navy"
       >
-        {/* Outer geometric shield / diamond with subtle gold stroke */}
+        {/* Outer geometric shield with gold stroke */}
         <rect
-          x="6"
-          y="6"
-          width="28"
-          height="28"
+          x="5"
+          y="5"
+          width="30"
+          height="30"
           rx="6"
           fill="#1A3A52"
           stroke="#D4AF37"
           strokeWidth="1.5"
-          strokeOpacity="0.4"
+          strokeOpacity="0.5"
         />
         {/* Inner Catalyst Geometric Prism Lines */}
         <path
-          d="M20 10 L30 20 L20 30 L10 20 Z"
+          d="M20 9 L31 20 L20 31 L9 20 Z"
           stroke="#D4AF37"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
-          d="M14 14 L26 26"
+          d="M13 13 L27 27"
           stroke="#F7F5F0"
           strokeWidth="1.2"
           strokeLinecap="round"
           strokeOpacity="0.8"
         />
         <path
-          d="M26 14 L14 26"
+          d="M27 13 L13 27"
           stroke="#F7F5F0"
           strokeWidth="1.2"
           strokeLinecap="round"
@@ -69,31 +69,27 @@ export default function Logo({
   };
 
   const textSizes = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl',
-  };
-
-  const subTextSizes = {
-    sm: 'text-[9px]',
-    md: 'text-[10px]',
-    lg: 'text-[11px]',
+    sm: 'text-base sm:text-lg',
+    md: 'text-lg sm:text-xl',
+    lg: 'text-xl sm:text-2xl',
   };
 
   const textColor = variant === 'light' ? 'text-white' : 'text-brand-navy';
 
   return (
-    <div className="flex items-center gap-3 select-none">
+    <div className="flex items-center gap-2.5 select-none">
       <LogoIcon className={iconSizes[size]} />
       {!iconOnly && (
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center -space-y-0.5 leading-none">
+          {/* Top Word: CATALIX */}
           <span
             className={`font-serif font-bold tracking-wider ${textColor} ${textSizes[size]} leading-none`}
           >
             CATALIX
           </span>
+          {/* Bottom Word: GLOBAL (Stacked tightly 1 above and 1 below with minimal clean gap) */}
           <span
-            className={`font-sans font-semibold tracking-[0.22em] text-brand-gold uppercase mt-0.5 ${subTextSizes[size]}`}
+            className={`font-serif font-bold tracking-wider text-brand-gold ${textSizes[size]} leading-none`}
           >
             GLOBAL
           </span>

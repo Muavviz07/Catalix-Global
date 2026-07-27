@@ -36,7 +36,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="max-w-4xl">
           {/* Editorial Kicker */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-cream/90 border border-brand-navy/10 text-xs font-semibold tracking-wider text-brand-navy uppercase mb-6 shadow-xs">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/35 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-6 shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-brand-gold" />
             <span>Fractional CIO · CDO · AI Advisory</span>
           </div>

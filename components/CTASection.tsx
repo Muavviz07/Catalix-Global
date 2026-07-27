@@ -12,14 +12,14 @@ export default function CTASection({
   onOpenRoadmapModal,
 }: CTASectionProps) {
   return (
-    <section className="relative py-24 bg-brand-navy text-white overflow-hidden border-t-2 border-brand-gold">
+    <section className="relative py-16 lg:py-20 bg-brand-navy text-white overflow-hidden border-t-2 border-brand-gold">
       {/* Background Radial Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Kicker */}
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-gold uppercase tracking-wider bg-white/5 px-3 py-1 rounded-full border border-brand-gold/30">
+          <div className="inline-flex items-center gap-2 text-sm font-mono font-bold text-brand-gold uppercase tracking-wider bg-white/5 px-3.5 py-1.5 rounded-full border border-brand-gold/30">
             <Sparkles className="w-4 h-4 text-brand-gold" />
             <span>START THE CONVERSATION</span>
           </div>

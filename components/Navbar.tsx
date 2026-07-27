@@ -84,10 +84,10 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
               viewAllLabel="View All Sectors →"
             />
             <NavDropdown
-              label="Systems"
+              label="Platforms"
               items={systemsDropdownItems}
               viewAllHref="/business-systems"
-              viewAllLabel="View All Systems →"
+              viewAllLabel="View All Platforms →"
             />
             <Link
               href="/approach"
@@ -208,13 +208,13 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 )}
               </div>
 
-              {/* Accordion 3: Systems */}
+              {/* Accordion 3: Platforms */}
               <div className="border-b border-brand-navy/10 pb-2">
                 <button
                   onClick={() => toggleMobileAccordion('systems')}
                   className="w-full flex items-center justify-between py-2 text-sm font-bold text-brand-navy text-left"
                 >
-                  <span>Business Systems</span>
+                  <span>Enterprise Platforms</span>
                   <ChevronDown
                     className={`w-4 h-4 text-brand-gold transition-transform ${
                       mobileActiveAccordion === 'systems' ? 'rotate-180' : ''
@@ -238,7 +238,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                       onClick={() => setMobileMenuOpen(false)}
                       className="block text-xs font-bold text-brand-gold pt-1"
                     >
-                      View All Systems →
+                      View All Enterprise Platforms →
                     </Link>
                   </div>
                 )}

@@ -23,19 +23,18 @@ export default function GeneralEstimator({ onOpenConsultation }: GeneralEstimato
   ).toFixed(2);
 
   return (
-    <section id="estimator" className="py-24 bg-white border-b border-brand-navy/10">
+    <section id="estimator" className="py-10 lg:py-14 bg-white border-b border-brand-navy/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-gold uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+        {/* Section Header (Fix 4: Tighter gap & Fix 5: Prominent kicker badge & subtitle legibility) */}
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-brand-gold/15 border border-brand-gold/30 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-brand-gold"></span>
             <span>OPERATIONAL YIELD CALCULATOR</span>
           </div>
           <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-navy">
             Estimate Your Enterprise Transformation Value
           </h2>
-          <div className="w-16 h-0.5 bg-brand-gold mx-auto my-2" />
-          <p className="text-base text-brand-text/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-brand-navy/90 font-medium max-w-2xl mx-auto leading-relaxed">
             Adjust your annual enterprise revenue and manufacturing facility count to preview potential working capital releases and efficiency gains.
           </p>
         </div>
@@ -48,11 +47,11 @@ export default function GeneralEstimator({ onOpenConsultation }: GeneralEstimato
               <h3 className="font-serif font-bold text-2xl text-brand-navy">
                 Data-Backed Impact Benchmarks
               </h3>
-              <p className="text-sm text-brand-text/90 leading-relaxed">
+              <p className="text-sm text-brand-navy/80 leading-relaxed font-normal">
                 Based on historical client engagements across industrial manufacturing, high-tech, and consumer goods supply chains.
               </p>
 
-              <ul className="space-y-3 pt-2 text-xs text-brand-navy font-medium">
+              <ul className="space-y-3 pt-2 text-xs text-brand-navy font-bold">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-gold"></span>
                   <span>Average Inventory Buffer Reduction: 18% - 28%</span>
@@ -68,7 +67,7 @@ export default function GeneralEstimator({ onOpenConsultation }: GeneralEstimato
               </ul>
             </div>
 
-            <div className="p-4 bg-brand-navy/5 rounded-sm border border-brand-navy/10 flex items-start gap-3 text-xs text-brand-navy">
+            <div className="p-4 bg-brand-navy/5 rounded-sm border border-brand-navy/10 flex items-start gap-3 text-xs text-brand-navy font-medium">
               <Sparkles className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
               <span>
                 Calculations provide an executive preview. For a comprehensive audit, request a custom diagnostic tailored to your multi-site architecture.
@@ -77,7 +76,7 @@ export default function GeneralEstimator({ onOpenConsultation }: GeneralEstimato
           </div>
 
           {/* Right Column: Calculator Widget */}
-          <div className="lg:col-span-7 bg-brand-navy-dark p-8 sm:p-12 rounded-sm border border-brand-gold/30 shadow-2xl space-y-8 text-white">
+          <div className="lg:col-span-7 bg-brand-navy-dark p-8 sm:p-10 rounded-sm border border-brand-gold/30 shadow-2xl space-y-8 text-white">
             {/* Slider 1: Revenue */}
             <div className="space-y-3">
               <div className="flex items-center justify-between text-sm">
@@ -130,45 +129,48 @@ export default function GeneralEstimator({ onOpenConsultation }: GeneralEstimato
               </div>
             </div>
 
-            {/* Output Metrics Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10">
-              <div className="p-5 bg-brand-navy/80 rounded-sm border border-brand-gold/40">
-                <span className="text-[10px] font-mono font-bold tracking-wider text-slate-300 uppercase block mb-1">
-                  EST. WORKING CAPITAL RELEASED
+            {/* Output Metric Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-5 bg-white/5 rounded-sm border border-brand-gold/30 space-y-1">
+                <span className="text-[11px] font-mono text-slate-300 uppercase tracking-wider block">
+                  Est. Working Capital Release
                 </span>
-                <div className="font-serif font-bold text-3xl sm:text-4xl text-brand-gold">
+                <div className="text-3xl font-serif font-bold text-brand-gold">
                   ${workingCapital}M
                 </div>
-                <span className="text-[11px] text-slate-300 block mt-1">
-                  Inventory & buffer stock rationalization
+                <span className="text-[10px] text-slate-400 block pt-1">
+                  Inventory & buffer reduction yield
                 </span>
               </div>
 
-              <div className="p-5 bg-brand-navy/80 rounded-sm border border-white/20">
-                <span className="text-[10px] font-mono font-bold tracking-wider text-slate-300 uppercase block mb-1">
-                  EST. ANNUAL EBITDA CAPACITY LIFT
+              <div className="p-5 bg-white/5 rounded-sm border border-brand-gold/30 space-y-1">
+                <span className="text-[11px] font-mono text-slate-300 uppercase tracking-wider block">
+                  Est. Annual EBITDA Expansion
                 </span>
-                <div className="font-serif font-bold text-3xl sm:text-4xl text-white">
+                <div className="text-3xl font-serif font-bold text-brand-gold">
                   ${ebitdaLift}M
                 </div>
-                <span className="text-[11px] text-slate-300 block mt-1">
-                  OEE & downtime reduction gains
+                <span className="text-[10px] text-slate-400 block pt-1">
+                  OEE, scrap & process margin lift
                 </span>
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="pt-2">
+            {/* CTA inside Widget */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10">
+              <span className="text-xs text-slate-300">
+                Want an audited diagnostic for your board?
+              </span>
               <button
                 onClick={() =>
                   onOpenConsultation(
-                    `Custom Yield Diagnostic ($${revenue}M Revenue, ${plants} Sites)`
+                    `Operational Yield Diagnostic ($${revenue}M Revenue, ${plants} Sites)`
                   )
                 }
-                className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-sm uppercase tracking-wider rounded-sm transition-all shadow-md group"
+                className="w-full sm:w-auto px-6 py-3 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md flex items-center justify-center gap-2 group"
               >
-                <span>Request Custom Executive Diagnostic</span>
-                <ArrowRight className="w-4 h-4 text-brand-navy group-hover:translate-x-1 transition-transform" />
+                <span>Request Audited Diagnostic</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
