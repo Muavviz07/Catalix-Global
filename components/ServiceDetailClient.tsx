@@ -21,7 +21,7 @@ import {
   FileCheck2,
 } from 'lucide-react';
 
-const iconMap = { Shield, Layers, Compass, TrendingUp, Cpu };
+const iconMap = { Shield, Layers, Compass, TrendingUp, Cpu, FileCheck2 };
 
 interface ServiceDetailClientProps {
   service: ServiceData;
@@ -154,7 +154,7 @@ export default function ServiceDetailClient({
                 </h2>
               </div>
               <p className="text-xs sm:text-sm text-brand-text/80 max-w-md mt-2 md:mt-0">
-                Hover or select any column to explore the 5 core practice deliverables.
+                Hover or select any column to explore the {service.deliverables.length} core practice deliverables.
               </p>
             </div>
 

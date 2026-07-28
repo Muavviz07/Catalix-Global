@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Shield, Layers, Compass, TrendingUp, Cpu, ArrowRight } from 'lucide-react';
+import { Shield, Layers, Compass, TrendingUp, Cpu, ArrowRight, FileCheck2 } from 'lucide-react';
 import { servicesData } from '@/data/siteData';
 
 const iconMap = {
@@ -10,6 +10,7 @@ const iconMap = {
   Compass,
   TrendingUp,
   Cpu,
+  FileCheck2,
 };
 
 export default function ServicesOverview() {
@@ -28,7 +29,7 @@ export default function ServicesOverview() {
             </h2>
           </div>
           <p className="text-base text-brand-text/80 font-normal max-w-md mt-4 md:mt-0">
-            Five integrated practices for enterprise transformation and independent executive steering.
+            Six integrated practices for enterprise transformation and independent executive steering.
           </p>
         </div>
 

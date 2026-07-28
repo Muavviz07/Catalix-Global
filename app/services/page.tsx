@@ -33,13 +33,13 @@ export default function ServicesHubPage() {
                 Catalix Global Practices
               </h1>
               <p className="text-base sm:text-lg text-brand-text/80 leading-relaxed">
-                Five specialized consulting practice lines engineered to steer complex ERP migrations, executive digital transformations, and operational EBITDA yield — with 100% vendor independence.
+                Six specialized consulting practice lines engineered to steer complex ERP migrations, executive digital transformations, and operational EBITDA yield — with 100% vendor independence.
               </p>
 
               {/* Trust Indicators Bar */}
               <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-navy/10 text-xs font-mono font-bold text-brand-navy">
                 <div>
-                  <span className="text-brand-gold text-base block font-serif">5 Core</span>
+                  <span className="text-brand-gold text-base block font-serif">6 Core</span>
                   <span className="text-brand-navy/60 font-sans text-[11px]">Practice Lines</span>
                 </div>
                 <div>

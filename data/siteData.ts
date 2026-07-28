@@ -3,7 +3,7 @@ export interface ServiceData {
   slug: string;
   title: string;
   subtitle: string;
-  iconName: 'Shield' | 'Layers' | 'Compass' | 'TrendingUp' | 'Cpu';
+  iconName: 'Shield' | 'Layers' | 'Compass' | 'TrendingUp' | 'Cpu' | 'FileCheck2';
   shortCopy: string;
   heroSubheading: string;
   overview: {
@@ -24,7 +24,7 @@ export interface ServiceData {
     output1Unit: string;
     output2Label: string;
     output2Unit: string;
-    type: 'cio' | 'erp' | 'digital' | 'operational' | 'ai';
+    type: 'cio' | 'erp' | 'digital' | 'operational' | 'ai' | 'ipo';
   };
   relatedSectors: string[]; // exactly 4 sector slugs
   relatedServices: string[]; // service slugs
@@ -121,7 +121,7 @@ export const servicesData: ServiceData[] = [
       type: 'cio',
     },
     relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals'],
-    relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory']
+    relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory', 'ipo-readiness-compliance']
   },
   {
     id: 'erp-advisory',
@@ -166,7 +166,7 @@ export const servicesData: ServiceData[] = [
       type: 'erp',
     },
     relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'distribution-trading'],
-    relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence']
+    relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence', 'ipo-readiness-compliance']
   },
   {
     id: 'digital-transformation',
@@ -302,6 +302,51 @@ export const servicesData: ServiceData[] = [
     },
     relatedSectors: ['fmcg', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
     relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence']
+  },
+  {
+    id: 'ipo-readiness',
+    slug: 'ipo-readiness-compliance',
+    title: 'IPO Readiness & Compliance',
+    subtitle: 'Governance & Auditability',
+    iconName: 'FileCheck2',
+    shortCopy: 'Strengthen IT governance, validate enterprise systems, and reduce technology risk to support a successful public listing.',
+    heroSubheading: 'Enhance IT governance, controls, and compliance frameworks to build investor confidence and secure your IPO timeline.',
+    overview: {
+      headline: 'Investor-Grade Technology Governance & Controls',
+      paragraphs: [
+        'Transitioning to a public company requires a quantum leap in IT governance, regulatory compliance, and system reliability. Catalix Global provides independent advisory to prepare your enterprise systems, data pipelines, and internal controls for rigorous auditor scrutiny.',
+        'We systematically evaluate IT general controls (ITGC), cybersecurity risk profiles, and business-critical data integrity. By bridging the gap between technical operations and financial audit requirements, we eliminate compliance bottlenecks before they threaten your IPO timeline.',
+        'Our Managing Partners sit on your side of the table, eliminating vendor bias and delivering pragmatic governance frameworks built to withstand public market scrutiny.'
+      ]
+    },
+    keyBenefits: [
+      'Strengthen IT Governance & IPO Readiness',
+      'Reduce Technology & Cybersecurity Risk',
+      'Validate Enterprise Systems & Data Integrity',
+      'Provide Executive Advisory & Board Guidance',
+      'Prepare IT General Controls (ITGC) & SOX Auditability',
+      'Independent Underwriter & Auditor Interface'
+    ],
+    deliverables: [
+      { title: 'IT Governance & IPO Readiness Assessment', description: 'Comprehensive audit of IT general controls (ITGC) and governance frameworks against public-company standards.' },
+      { title: 'Technology & Cybersecurity Risk Mitigation', description: 'Prioritizing and remediating cybersecurity vulnerabilities and operational risks affecting business continuity.' },
+      { title: 'Enterprise System & Data Validation', description: 'Ensuring core ERP and financial reporting data systems are reliable, transparent, and fully auditable.' },
+      { title: 'Board & Executive Advisory Guidance', description: 'Providing independent reporting and strategic alignment for Board members, management, and IPO advisors.' },
+      { title: 'Audit-Ready Control Documentation', description: 'Formalizing policies, access controls, and change-management logs to streamline future SOX audits.' }
+    ],
+    estimator: {
+      title: 'Estimate IPO Technology Risk & Readiness',
+      description: 'Adjust your annual enterprise revenue and target IPO timeline to project valuation risk mitigated and audit readiness.',
+      input1: { label: 'Annual Enterprise Revenue ($M)', min: 25, max: 1000, default: 150, step: 25, unit: '$M' },
+      input2: { label: 'Target IPO Timeline (Months)', min: 6, max: 36, default: 12, step: 2, unit: 'Mos' },
+      output1Label: 'Est. Valuation Risk Mitigated',
+      output1Unit: '$M',
+      output2Label: 'Projected Audit Readiness',
+      output2Unit: '%',
+      type: 'ipo',
+    },
+    relatedSectors: ['fmcg', 'electrical-equipment-manufacturing', 'petrochemicals', 'distribution-trading'],
+    relatedServices: ['cio-cdo-services', 'erp-advisory', 'digital-transformation']
   }
 ];
 

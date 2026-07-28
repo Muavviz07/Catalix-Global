@@ -65,6 +65,11 @@ const siteKnowledge = [
       "Catalix Global is 100% vendor-neutral. We take zero software reseller margins, referral fees, or vendor commissions. All recommendations are driven strictly by your P&L and operational requirements.",
   },
   {
+    keywords: ['ipo', 'sox', 'readiness', 'compliance', 'sec', 'controls', 'itgc', 'auditability'],
+    response:
+      "Catalix Global's IPO Readiness & Compliance practice prepares your IT governance, general controls (ITGC), and cybersecurity posturing to ensure investor trust, system reliability, and seamless compliance audits for a successful public listing."
+  },
+  {
     keywords: ['contact', 'consultation', 'book', 'schedule', 'audit', 'meeting', 'nda', 'pricing'],
     response:
       "You can schedule a confidential 45-minute executive discovery briefing directly with a Catalix Managing Partner. All sessions are protected under mutual enterprise NDA.",

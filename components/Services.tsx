@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   ChevronLeft,
   ChevronRight,
+  FileCheck2,
 } from 'lucide-react';
 
 interface ServicesProps {
@@ -111,6 +112,24 @@ const services = [
     ],
     impact: 'Unlocks high-ROI automation while maintaining IP security.',
   },
+  {
+    id: 'ipo-readiness',
+    number: '06',
+    title: 'IPO Readiness & Compliance',
+    subtitle: 'Governance & Auditability',
+    icon: FileCheck2,
+    tagline: 'Strengthen IT governance, validate enterprise systems, and reduce technology risk to support a successful public listing.',
+    description:
+      'Prepare your technology governance, general controls (ITGC), and enterprise data pipelines to withstand public market scrutiny and secure investor trust.',
+    deliverables: [
+      'IT Governance & IPO Readiness Assessment',
+      'Technology & Cybersecurity Risk Mitigation',
+      'Enterprise System & Data Validation',
+      'Board & Executive Advisory Guidance',
+      'Audit-Ready Control Documentation',
+    ],
+    impact: 'Reduces valuation risk and accelerates audit compliance.',
+  },
 ];
 
 export default function Services({ onOpenConsultation }: ServicesProps) {
@@ -146,8 +165,8 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
           </p>
         </div>
 
-        {/* 1. Practice Selector: 5-Column Non-Scrolling Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-5 gap-2 mb-8">
+        {/* 1. Practice Selector: 6-Column Non-Scrolling Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-6 gap-2 mb-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isActive = activeTab === index;
@@ -181,7 +200,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
               <span className="text-xs font-mono font-bold text-brand-gold uppercase tracking-wider">
-                Practice {activeService.number} of 05
+                Practice {activeService.number} of 06
               </span>
             </div>
 
@@ -206,8 +225,8 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
             </div>
           </div>
 
-          {/* 5-Node Segmented Touch Matrix */}
-          <div className="grid grid-cols-5 gap-1.5 p-1.5 bg-brand-cream/80 rounded-md border border-brand-navy/10">
+          {/* 6-Node Segmented Touch Matrix */}
+          <div className="grid grid-cols-6 gap-1.5 p-1.5 bg-brand-cream/80 rounded-md border border-brand-navy/10">
             {services.map((service, index) => {
               const Icon = service.icon;
               const isActive = activeTab === index;

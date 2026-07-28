@@ -36,6 +36,9 @@ export default function ServiceEstimator({
   } else if (estimator.type === 'ai') {
     out1 = (val1 * 0.02 * (val2 * 0.1 + 0.6)).toFixed(2);
     out2 = Math.min(95, 35 + val2 * 6).toFixed(0);
+  } else if (estimator.type === 'ipo') {
+    out1 = (val1 * 0.012 * (1 + (36 - val2) * 0.015)).toFixed(2);
+    out2 = Math.min(99, 45 + val2 * 1.5).toFixed(0);
   }
 
   return (
