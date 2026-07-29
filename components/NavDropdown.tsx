@@ -32,7 +32,7 @@ export default function NavDropdown({
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="flex items-center gap-1.5 text-sm font-medium text-brand-text/90 hover:text-brand-navy transition-colors py-2 focus:outline-none group"
+        className="flex items-center gap-1.5 text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 focus:outline-none group"
         aria-expanded={isOpen}
       >
         <span>{label}</span>

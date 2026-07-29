@@ -55,8 +55,8 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-brand-cream/95 backdrop-blur-md py-3 shadow-sm border-b border-brand-navy/10'
-          : 'bg-transparent py-5'
+          ? 'bg-brand-navy-dark/95 backdrop-blur-md py-3 shadow-xl border-b border-brand-gold/30'
+          : 'bg-brand-navy-dark/85 backdrop-blur-md py-4 border-b border-brand-gold/20 shadow-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             href="/"
             className="group focus:outline-none focus:ring-2 focus:ring-brand-gold rounded-sm p-0.5"
           >
-            <Logo size="md" />
+            <Logo size="md" variant="light" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -91,7 +91,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             />
             <Link
               href="/approach"
-              className="text-sm font-medium text-brand-text/90 hover:text-brand-navy transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
+              className="text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
             >
               Approach
             </Link>
@@ -101,10 +101,10 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-4">
             <button
               onClick={() => onOpenConsultation('Executive Consultation')}
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-navy hover:bg-brand-navy-dark rounded-sm transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 border border-brand-navy group"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-[13px] font-bold text-brand-navy bg-brand-gold hover:bg-brand-gold-hover uppercase tracking-wider rounded-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 group"
             >
               <span>Schedule Consultation</span>
-              <ArrowRight className="w-4 h-4 ml-2 text-brand-gold group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 text-brand-navy group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
@@ -112,7 +112,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
           <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-md bg-brand-navy text-brand-gold hover:text-white transition-colors focus:outline-none shadow-xs"
+              className="p-2.5 rounded-md bg-white/10 text-brand-gold hover:text-white border border-brand-gold/30 transition-colors focus:outline-none shadow-xs"
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
