@@ -77,24 +77,30 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
               viewAllHref="/services"
               viewAllLabel="View All Services →"
             />
+            <Link
+              href="/why-us"
+              className="text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
+            >
+              Why Us
+            </Link>
+            <Link
+              href="/approach"
+              className="text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
+            >
+              Our Approach
+            </Link>
             <NavDropdown
-              label="Sectors"
+              label="Industries We Serve"
               items={sectorsDropdownItems}
               viewAllHref="/sectors"
               viewAllLabel="View All Sectors →"
             />
             <NavDropdown
-              label="Platforms"
+              label="Platform"
               items={systemsDropdownItems}
               viewAllHref="/business-systems"
               viewAllLabel="View All Platforms →"
             />
-            <Link
-              href="/approach"
-              className="text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
-            >
-              Approach
-            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -136,7 +142,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 Executive Menu
               </span>
 
-              {/* Accordion 1: Services */}
+              {/* 1. Services */}
               <div className="border-b border-brand-navy/10 pb-2">
                 <button
                   onClick={() => toggleMobileAccordion('services')}
@@ -172,13 +178,35 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 )}
               </div>
 
-              {/* Accordion 2: Sectors */}
+              {/* 2. Why Us */}
+              <div className="border-b border-brand-navy/10 pb-2">
+                <Link
+                  href="/why-us"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-2 text-sm font-bold text-brand-navy hover:text-brand-gold"
+                >
+                  Why Us
+                </Link>
+              </div>
+
+              {/* 3. Our Approach */}
+              <div className="border-b border-brand-navy/10 pb-2">
+                <Link
+                  href="/approach"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-2 text-sm font-bold text-brand-navy hover:text-brand-gold"
+                >
+                  Our Approach
+                </Link>
+              </div>
+
+              {/* 4. Industries We Serve */}
               <div className="border-b border-brand-navy/10 pb-2">
                 <button
                   onClick={() => toggleMobileAccordion('sectors')}
                   className="w-full flex items-center justify-between py-2 text-sm font-bold text-brand-navy text-left"
                 >
-                  <span>Sectors</span>
+                  <span>Industries We Serve</span>
                   <ChevronDown
                     className={`w-4 h-4 text-brand-gold transition-transform ${
                       mobileActiveAccordion === 'sectors' ? 'rotate-180' : ''
@@ -208,13 +236,13 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 )}
               </div>
 
-              {/* Accordion 3: Platforms */}
+              {/* 5. Platform */}
               <div className="border-b border-brand-navy/10 pb-2">
                 <button
                   onClick={() => toggleMobileAccordion('systems')}
                   className="w-full flex items-center justify-between py-2 text-sm font-bold text-brand-navy text-left"
                 >
-                  <span>Enterprise Platforms</span>
+                  <span>Platform</span>
                   <ChevronDown
                     className={`w-4 h-4 text-brand-gold transition-transform ${
                       mobileActiveAccordion === 'systems' ? 'rotate-180' : ''
@@ -238,7 +266,7 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                       onClick={() => setMobileMenuOpen(false)}
                       className="block text-xs font-bold text-brand-gold pt-1"
                     >
-                      View All Enterprise Platforms →
+                      View All Platforms →
                     </Link>
                   </div>
                 )}

@@ -20,9 +20,9 @@ export default function ServicesHubPage() {
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-24 pb-0">
+      <main className="pt-32 pb-0">
         {/* 1. Header Hero */}
-        <section className="bg-brand-cream pb-12 border-b border-brand-navy/10">
+        <section className="bg-brand-cream pt-4 pb-12 border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy/5 border border-brand-navy/10 text-xs font-mono font-bold text-brand-gold uppercase tracking-wider">

@@ -110,13 +110,17 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pt-2 border-t border-white/10 flex items-center gap-4 text-xs font-semibold text-slate-300">
+            <div className="pt-2 border-t border-white/10 flex items-center gap-3 text-xs font-semibold text-slate-300">
+              <Link href="/why-us" className="hover:text-brand-gold transition-colors">
+                Why Us
+              </Link>
+              <span>•</span>
               <Link href="/approach" className="hover:text-brand-gold transition-colors">
-                Approach
+                Our Approach
               </Link>
               <span>•</span>
               <Link href="/contact" className="hover:text-brand-gold transition-colors">
-                Contact Executive Team
+                Contact
               </Link>
             </div>
           </div>
