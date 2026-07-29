@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import {
   Shield,
   Layers,
@@ -25,110 +26,116 @@ const services = [
   {
     id: 'cio-cdo',
     number: '01',
-    title: 'CIO / CDO Services',
-    subtitle: 'Virtual CIO / CDO Leadership',
+    slug: 'cio-cdo-services',
+    title: 'Fractional CIO / CDO Services',
+    subtitle: 'Fractional CIO / CDO Services',
     icon: Shield,
-    tagline: 'Strategic IT leadership and governance built for digital transformation.',
+    tagline: 'Executive IT & Digital Leadership Without Overhead',
     description:
-      'We offer fractional and virtual CIO/CDO services to align technology investments directly with business growth, capital efficiency, and digital risk management.',
+      'Catalix Global provides fractional and virtual CIO/CDO leadership to help manufacturing and industrial enterprises align technology strategy, digital investments, governance, and innovation with business objectives.',
     deliverables: [
-      'Virtual CIO / CDO Executive Services',
-      'IT Strategy & Digital Transformation',
-      'Budget Planning & Technology Roadmap',
-      'Vendor Management & IT Governance',
-      'Cybersecurity & Compliance Oversight',
+      'Fractional CIO / CDO Leadership',
+      'IT Strategy & Digital Transformation Roadmaps',
+      'Technology Investment & Capex Optimisation',
+      'ERP, Architecture & Vendor Governance',
+      'Cybersecurity, Risk & Compliance Oversight',
     ],
-    impact: 'Maximizes IT ROI & aligns tech strategy with P&L objectives.',
+    impact: 'Ensures every investment drives measurable value through improved performance, reduced risk, and sustainable growth.',
   },
   {
     id: 'erp-advisory',
     number: '02',
+    slug: 'erp-advisory',
     title: 'ERP Advisory',
-    subtitle: 'End-to-End Project Steering',
+    subtitle: 'ERP Advisory',
     icon: Layers,
-    tagline: 'Independent advisory across SAP, Oracle, and Microsoft ERP lifecycles.',
+    tagline: 'Independent ERP Advisory from Strategy to Value Realisation',
     description:
-      'Independent advisory services throughout the complete lifecycle of ERP projects—from software selection and contract negotiations to go-live readiness.',
+      'Catalix Global provides independent ERP advisory across the entire transformation lifecycle, from ERP strategy, vendor selection, and contract negotiations to implementation governance, business process optimisation, and post-go-live value realisation.',
     deliverables: [
-      'ERP Vendor Selection & RFP Management',
-      'ERP Health Checks & Project Recovery',
-      'Business Process Redesign (BPR)',
-      'Go-Live Readiness Assessment',
-      'Vendor Negotiations & Independent QA',
+      'ERP Strategy & Transformation Roadmaps',
+      'Independent Vendor & System Integrator Selection',
+      'Implementation Governance & Executive PMO Oversight',
+      'Business Process Optimisation & Digital Operating Model Design',
+      'Go-Live Readiness & Transformation Assurance',
     ],
-    impact: 'Eliminates cost overruns & mitigates implementation risks.',
+    impact: 'Ensures ERP programmes remain aligned with business objectives, implementation partners are accountable, and technology investments deliver measurable outcomes.',
   },
   {
     id: 'digital-transformation',
     number: '03',
-    title: 'Digital Transformation',
-    subtitle: 'Modernizing Business Operations',
+    slug: 'digital-transformation',
+    title: 'Digital Transformation Advisory',
+    subtitle: 'Digital Transformation Advisory',
     icon: Compass,
-    tagline: 'End-to-end digital evolution connecting shop floor to boardroom.',
+    tagline: 'Building Intelligent, Connected, and Data-Driven Enterprises',
     description:
-      'Aligning cloud infrastructure, legacy system modernization, and enterprise data architecture to drive operational agility.',
+      'Catalix Global helps manufacturing and industrial enterprises develop pragmatic Industry 4.0 strategies that connect shop-floor operations, enterprise systems, and executive decision-making.',
     deliverables: [
-      'Enterprise Digital Maturity Assessment',
-      'Cloud Architecture & Migration Strategy',
-      'Data Governance & Analytics Strategy',
-      'Legacy System Modernization Roadmap',
-      'Change Management & User Adoption',
+      'Industry 4.0 Transformation Strategy & Roadmaps',
+      'Smart Factory Maturity Assessments',
+      'MES, IoT & ERP Integration Strategy',
+      'Shop-Floor Digitisation & Real-Time Data Enablement',
+      'Manufacturing Analytics & Performance Dashboards',
     ],
-    impact: 'Accelerates time-to-market & improves customer engagement.',
+    impact: 'Integrates MES, IoT, automation, analytics, and digital workflows to improve operational visibility, enhance productivity, and enable data-driven performance management.',
   },
   {
     id: 'operational-excellence',
     number: '04',
-    title: 'Operational Excellence',
-    subtitle: 'Process & Yield Optimization',
+    slug: 'operational-excellence',
+    title: 'Operational Excellence Advisory',
+    subtitle: 'Operational Excellence Advisory',
     icon: TrendingUp,
-    tagline: 'Maximizing capacity, OEE yield, and working capital velocity.',
+    tagline: 'Driving Manufacturing Performance Through Data, Process, and Technology',
     description:
-      'Deep operational diagnostics across supply chain, shop-floor MES, and warehouse management to eliminate waste and boost margin performance.',
+      'Catalix Global helps manufacturing and industrial enterprises identify and unlock operational value by improving inventory efficiency, asset utilisation, production performance, and supply chain execution.',
     deliverables: [
-      'Supply Chain & WMS Optimization',
-      'Shop Floor MES & OEE Improvement',
-      'Inventory Reduction & Working Capital',
-      'S&OP Planning Process Redesign',
-      'Quality Management Systems (QMS)',
+      'Working Capital & Inventory Optimisation',
+      'OEE Improvement & Manufacturing Productivity',
+      'Multi-Site S&OP and Production Planning Excellence',
+      'Capacity Optimisation & Production Scheduling',
+      'Quality Improvement & Root-Cause Analysis',
     ],
-    impact: 'Reduces operating costs & improves throughput margins.',
+    impact: 'Optimises S&OP, production planning, manufacturing processes, and performance analytics to enable faster decisions, reduced waste, and improved operational outcomes.',
   },
   {
     id: 'ai-advisory',
     number: '05',
+    slug: 'ai-advisory',
     title: 'AI Advisory',
-    subtitle: 'Practical Enterprise AI Adoption',
+    subtitle: 'AI Advisory',
     icon: Cpu,
-    tagline: 'Pragmatic AI governance, agentic automation, and LLM deployment.',
+    tagline: 'Turning AI Ambition into Measurable Business Value',
     description:
-      'Navigating enterprise AI adoption with secure frameworks, high-ROI use cases, and robust data pipelines for manufacturing and B2B enterprises.',
+      'Catalix Global helps executive leaders develop practical AI strategies that align with business objectives, strengthen governance, and deliver measurable operational and financial outcomes.',
     deliverables: [
-      'Enterprise AI Readiness & Opportunity Audit',
-      'Secure LLM Architecture & IP Protection',
-      'Agentic Process Automation Workflows',
-      'AI Governance, Policy & Risk Frameworks',
-      'Custom Generative AI Proof of Concepts',
+      'Enterprise AI Strategy & Governance',
+      'AI Readiness & Data Maturity Assessments',
+      'Responsible AI, Security & Risk Management',
+      'High-Value AI Use Case Identification & Prioritisation',
+      'Manufacturing & Supply Chain AI Strategy',
     ],
-    impact: 'Unlocks high-ROI automation while maintaining IP security.',
+    impact: 'Unlocks value from intelligent forecasting, predictive maintenance, supply chain optimisation, and executive decision support with responsible frameworks.',
   },
   {
     id: 'ipo-readiness',
     number: '06',
-    title: 'IPO Readiness & Compliance',
-    subtitle: 'Governance & Auditability',
+    slug: 'ipo-readiness',
+    title: 'IPO Readiness & Compliance Assessment',
+    subtitle: 'IPO Readiness & Compliance Assessment',
     icon: FileCheck2,
-    tagline: 'Strengthen IT governance, validate enterprise systems, and reduce technology risk to support a successful public listing.',
+    tagline: 'Building Investor Confidence Through Strong Technology Governance',
     description:
-      'Prepare your technology governance, general controls (ITGC), and enterprise data pipelines to withstand public market scrutiny and secure investor trust.',
+      'Catalix Global helps organisations prepare for public market expectations by strengthening IT governance, cybersecurity, enterprise controls, data integrity, and regulatory compliance.',
     deliverables: [
-      'IT Governance & IPO Readiness Assessment',
-      'Technology & Cybersecurity Risk Mitigation',
-      'Enterprise System & Data Validation',
-      'Board & Executive Advisory Guidance',
-      'Audit-Ready Control Documentation',
+      'IPO Technology Readiness & Governance Assessment',
+      'IT Governance, Risk & Compliance (IT GRC)',
+      'IT General Controls (ITGC) & SOX Readiness',
+      'Cybersecurity, Data Integrity & Technology Risk Assessments',
+      'Executive & Board Advisory for Technology Governance',
     ],
-    impact: 'Reduces valuation risk and accelerates audit compliance.',
+    impact: 'Ensures your technology environment is aligned with governance, audit, and compliance requirements, enabling a smoother IPO journey while protecting enterprise value.',
   },
 ];
 
@@ -147,7 +154,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
   };
 
   return (
-    <section id="services" className="py-10 lg:py-14 bg-white border-b border-brand-navy/5">
+    <section id="services" className="py-[72px] bg-white border-b border-brand-navy/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-5 border-b border-brand-navy/10">
@@ -157,7 +164,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
               <span>STRATEGIC PRACTICE AREAS</span>
             </div>
             <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-navy">
-              What We Do
+              Our Services
             </h2>
           </div>
           <p className="text-base sm:text-lg text-brand-navy/90 font-medium max-w-md mt-4 md:mt-0 leading-relaxed">
@@ -270,7 +277,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-brand-gold uppercase tracking-wider block">
-                      {activeService.subtitle}
+                      {activeService.title}
                     </span>
                     <h3 className="font-serif font-bold text-2xl sm:text-4xl text-brand-navy">
                       {activeService.title}
@@ -293,7 +300,7 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
                   </span>
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => onOpenConsultation(activeService.title)}
                     className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-brand-navy hover:bg-brand-navy-dark text-white font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md group"
@@ -301,6 +308,12 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
                     <span>Request {activeService.title} Overview</span>
                     <ArrowRight className="w-4 h-4 ml-2 text-brand-gold group-hover:translate-x-1 transition-transform" />
                   </button>
+                  <Link
+                    href={`/services/${activeService.slug}`}
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-brand-cream text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md border border-brand-navy/20"
+                  >
+                    <span>Explore Practice Details</span>
+                  </Link>
                 </div>
               </div>
 

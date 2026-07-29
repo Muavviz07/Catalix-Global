@@ -81,26 +81,27 @@ export const servicesData: ServiceData[] = [
   {
     id: 'cio-cdo',
     slug: 'cio-cdo-services',
-    title: 'CIO / CDO Services',
+    title: 'Fractional CIO / CDO Services',
     subtitle: 'Virtual Leadership & Strategy',
     iconName: 'Shield',
     shortCopy: 'Transform IT strategy and governance to align technology investments with business growth.',
-    heroSubheading: 'Executive IT and digital leadership tailored for enterprise leaders navigating complex tech transformations.',
+    heroSubheading: 'Executive IT & Digital Leadership Without Overhead',
     overview: {
-      headline: 'Executive IT & Digital Leadership Without Overhead',
+      headline: 'Fractional CIO / CDO Services',
       paragraphs: [
-        'Enterprise growth requires clear technology governance, capex optimization, and digital alignment with P&L objectives. Catalix Global provides fractional and virtual CIO/CDO leadership to steer high-stakes technology decisions.',
-        'We bridge executive vision, enterprise architecture, and vendor management—ensuring technology spend directly accelerates operational throughput, risk mitigation, and bottom-line margin expansion.',
-        'Our managing partners sit on your side of the table, eliminating vendor bias and delivering pragmatic digital roadmaps built for enterprise scale.'
+        'In today\'s rapidly evolving business environment, technology must be a strategic growth enabler, not just an operational function.',
+        'Catalix Global provides fractional and virtual CIO/CDO leadership to help manufacturing and industrial enterprises align technology strategy, digital investments, governance, and innovation with business objectives.',
+        'We bridge executive vision, enterprise architecture, operational priorities, and technology execution, ensuring every investment drives measurable value through improved performance, reduced risk, and sustainable growth.',
+        'Our Managing Partners work alongside your leadership team as trusted advisors, providing vendor-neutral guidance and practical roadmaps designed for enterprise transformation.'
       ]
     },
     keyBenefits: [
-      'Virtual CIO / CDO Executive Leadership',
-      'IT Strategy & Digital Roadmap Alignment',
-      'Budget Planning & Capex Rationalization',
-      'Vendor Management & RFP Governance',
-      'Cybersecurity & Risk Oversight',
-      'IT Operating Model Modernization'
+      'Fractional CIO / CDO Leadership',
+      'IT Strategy & Digital Transformation Roadmaps',
+      'Technology Investment & Capex Optimisation',
+      'ERP, Architecture & Vendor Governance',
+      'Cybersecurity, Risk & Compliance Oversight',
+      'IT Operating Model & Governance Modernisation'
     ],
     deliverables: [
       { title: 'Virtual CIO / CDO Executive Services', description: 'Fractional executive leadership steering your internal technology organization.' },
@@ -121,7 +122,7 @@ export const servicesData: ServiceData[] = [
       type: 'cio',
     },
     relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'petrochemicals'],
-    relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory', 'ipo-readiness-compliance']
+    relatedServices: ['erp-advisory', 'digital-transformation', 'ai-advisory', 'ipo-readiness']
   },
   {
     id: 'erp-advisory',
@@ -130,22 +131,23 @@ export const servicesData: ServiceData[] = [
     subtitle: 'End-to-End Implementation Steering',
     iconName: 'Layers',
     shortCopy: 'Independent guidance throughout ERP lifecycle—from vendor selection to go-live optimization.',
-    heroSubheading: 'Unbiased executive steering for SAP, Infor, and Microsoft Dynamics implementation lifecycles.',
+    heroSubheading: 'Independent ERP Advisory from Strategy to Value Realisation',
     overview: {
-      headline: 'Unbiased Steering Across the Entire ERP Lifecycle',
+      headline: 'ERP Advisory',
       paragraphs: [
-        'ERP implementations represent high-stakes capital investments that frequently suffer from budget overruns, timeline slippage, and operational disruption.',
-        'Catalix Global provides independent ERP advisory from initial vendor RFP and contract negotiation to PMO governance, business process redesign, and post-go-live optimization.',
-        'We enforce strict accountability on software vendors and implementation partners—protecting your capital and ensuring your new ERP delivers promised operational capabilities.'
+        'ERP investments are among the most critical technology decisions an enterprise makes. Without strong governance, they can lead to cost overruns, implementation delays, business disruption, and missed value opportunities.',
+        'Catalix Global provides independent ERP advisory across the entire transformation lifecycle, from ERP strategy, vendor selection, and contract negotiations to implementation governance, business process optimisation, and post-go-live value realisation.',
+        'We work alongside executive leadership to ensure ERP programmes remain aligned with business objectives, implementation partners are accountable, and technology investments deliver measurable operational and financial outcomes.'
       ]
     },
     keyBenefits: [
-      'Independent ERP Vendor & Integrator Selection',
-      'Implementation Risk Mitigation & PMO Governance',
-      'Business Process Redesign (BPR)',
-      'Go-Live Readiness & Cutover Audits',
-      'Contract Negotiation & Licensing Optimization',
-      'Post-Implementation Value Realization'
+      'ERP Strategy & Transformation Roadmaps',
+      'Independent Vendor & System Integrator Selection',
+      'Implementation Governance & Executive PMO Oversight',
+      'Business Process Optimisation & Digital Operating Model Design',
+      'Go-Live Readiness & Transformation Assurance',
+      'ERP Licensing, Contract & Value Optimisation',
+      'Post-Implementation Performance Improvement'
     ],
     deliverables: [
       { title: 'ERP Vendor Selection & RFP Management', description: 'Objective platform selection across SAP, Infor LN, and Microsoft D365 tailored to your sector.' },
@@ -166,31 +168,32 @@ export const servicesData: ServiceData[] = [
       type: 'erp',
     },
     relatedSectors: ['fmcg', 'power-cables-manufacturing', 'electrical-equipment-manufacturing', 'distribution-trading'],
-    relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence', 'ipo-readiness-compliance']
+    relatedServices: ['cio-cdo-services', 'digital-transformation', 'operational-excellence', 'ipo-readiness']
   },
   {
     id: 'digital-transformation',
     slug: 'digital-transformation',
-    title: 'Digital Transformation',
-    subtitle: 'Industry 4.0 & Shop-Floor Digitization',
+    title: 'Digital Transformation Advisory',
+    subtitle: 'Building Intelligent, Connected, and Data-Driven Enterprises',
     iconName: 'Compass',
     shortCopy: 'Build pragmatic Industry 4.0 roadmaps connecting plant floor visibility to C-suite decisions.',
-    heroSubheading: 'Connecting shop-floor telemetry with executive ERP planning to drive modern industrial performance.',
+    heroSubheading: 'Building Intelligent, Connected, and Data-Driven Enterprises',
     overview: {
-      headline: 'Pragmatic Industry 4.0 Roadmaps for Modern Manufacturing',
+      headline: 'Digital Transformation Advisory',
       paragraphs: [
-        'True digital transformation goes beyond technology adoption—it establishes real-time visibility across shop-floor operations, supply chains, and executive dashboards.',
-        'Catalix Global designs pragmatic Industry 4.0 blueprints that integrate Manufacturing Execution Systems (MES), IoT sensors, and automated workflows directly into enterprise core systems.',
-        'We help industrial organizations eliminate paper-based shop-floor tracking, automate KPI reporting, and empower plant managers with predictive decision-making.'
+        'Digital transformation is not about technology adoption alone, it is about creating smarter operations, faster decisions, and measurable business value.',
+        'Catalix Global helps manufacturing and industrial enterprises develop pragmatic Industry 4.0 strategies that connect shop-floor operations, enterprise systems, and executive decision-making.',
+        'We design transformation roadmaps that integrate MES, IoT, automation, analytics, and digital workflows to improve operational visibility, enhance productivity, and enable data-driven performance management.',
+        'From eliminating manual processes to enabling real-time operational insights, we help organisations build the foundation for intelligent, agile, and future-ready manufacturing.'
       ]
     },
     keyBenefits: [
-      'Industry 4.0 Transformation Blueprint',
-      'Smart Factory & Automation Assessments',
-      'MES Strategy & ERP Data Integration',
-      'Shop-Floor Digitization & Telemetry',
-      'Real-Time KPI & Operations Dashboards',
-      'Cross-Functional Process Automation'
+      'Industry 4.0 Transformation Strategy & Roadmaps',
+      'Smart Factory Maturity Assessments',
+      'MES, IoT & ERP Integration Strategy',
+      'Shop-Floor Digitisation & Real-Time Data Enablement',
+      'Manufacturing Analytics & Performance Dashboards',
+      'Process Automation & Digital Workflow Optimisation'
     ],
     deliverables: [
       { title: 'Industry 4.0 Transformation Roadmap', description: 'Phased digital blueprint connecting plant equipment, MES, and enterprise ERP systems.' },
@@ -216,26 +219,27 @@ export const servicesData: ServiceData[] = [
   {
     id: 'operational-excellence',
     slug: 'operational-excellence',
-    title: 'Operational Excellence',
-    subtitle: 'Technology-Driven Productivity',
+    title: 'Operational Excellence Advisory',
+    subtitle: 'Driving Manufacturing Performance Through Data, Process, and Technology',
     iconName: 'TrendingUp',
     shortCopy: 'Leverage digital tools to unlock inventory capital, improve OEE, and stabilize production.',
-    heroSubheading: 'Aligning digital tools with shop-floor execution to drive EBITDA gains and working capital velocity.',
+    heroSubheading: 'Driving Manufacturing Performance Through Data, Process, and Technology',
     overview: {
-      headline: 'Quantifiable Operational Gains Through Technology',
+      headline: 'Operational Excellence Advisory',
       paragraphs: [
-        'Technology initiatives must justify themselves on the balance sheet. Catalix Global focuses on operational excellence metrics: inventory reduction, OEE improvement, planning accuracy, and downtime elimination.',
-        'We synchronize multi-site Sales & Operations Planning (S&OP) with finite-capacity factory scheduling—eliminating safety stock inflation and bottleneck delays.',
-        'By connecting root-cause quality management and predictive telemetry, we help plant managers achieve consistent OTIF delivery and margin expansion.'
+        'Operational excellence is achieved when people, processes, and technology work together to deliver sustainable improvements in productivity, profitability, and customer performance.',
+        'Catalix Global helps manufacturing and industrial enterprises identify and unlock operational value by improving inventory efficiency, asset utilisation, production performance, and supply chain execution.',
+        'We combine operational expertise with digital capabilities to optimise S&OP, production planning, manufacturing processes, and performance analytics, enabling faster decisions, reduced waste, and improved operational outcomes.',
+        'By connecting real-time operational insights with business processes, we help organisations improve OEE, reduce downtime, enhance delivery performance, and drive sustainable EBITDA improvement.'
       ]
     },
     keyBenefits: [
-      'Inventory & Working Capital Optimization',
-      'OEE & Machine Capacity Unlock',
-      'Multi-Site S&OP & Planning Synchronization',
-      'Finite-Capacity Production Scheduling',
-      'Scrap & Defect Root-Cause Elimination',
-      'Predictive Maintenance Telemetry'
+      'Working Capital & Inventory Optimisation',
+      'OEE Improvement & Manufacturing Productivity',
+      'Multi-Site S&OP and Production Planning Excellence',
+      'Capacity Optimisation & Production Scheduling',
+      'Quality Improvement & Root-Cause Analysis',
+      'Predictive Maintenance & Asset Performance Management'
     ],
     deliverables: [
       { title: 'Inventory & Working Capital Rationalization', description: 'Demand-supply synchronization releasing 18-28% tied-up capital in buffer stocks.' },
@@ -262,25 +266,25 @@ export const servicesData: ServiceData[] = [
     id: 'ai-advisory',
     slug: 'ai-advisory',
     title: 'AI Advisory',
-    subtitle: 'Pragmatic & Secure AI Integration',
+    subtitle: 'Turning AI Ambition into Measurable Business Value',
     iconName: 'Cpu',
     shortCopy: 'Guide enterprise leadership on integrating AI as a business value driver, not an experiment.',
-    heroSubheading: 'Deploying secure, high-ROI AI governance frameworks and agentic workflows for enterprise operations.',
+    heroSubheading: 'Turning AI Ambition into Measurable Business Value',
     overview: {
-      headline: 'Transform AI Hype Into Quantifiable Enterprise EBITDA',
+      headline: 'AI Advisory',
       paragraphs: [
-        'Generative AI and agentic automation present massive operational opportunities—alongside significant intellectual property, security, and data governance risks.',
-        'Catalix Global cuts through AI market noise. We provide C-suite executives with secure AI governance frameworks, data readiness audits, and prioritized high-ROI use cases.',
-        'We help enterprise leaders move past proof-of-concept experiments into scalable, secure AI workflows that automate demand forecasting, invoice auditing, and predictive maintenance.'
+        'Artificial Intelligence has the potential to transform manufacturing and enterprise operations, but only when supported by the right strategy, governance, and data foundation.',
+        'Catalix Global helps executive leaders develop practical AI strategies that align with business objectives, strengthen governance, and deliver measurable operational and financial outcomes. We identify high-value use cases, assess organisational readiness, and establish secure frameworks for responsible AI adoption.',
+        'From intelligent forecasting and predictive maintenance to supply chain optimisation and executive decision support, we help organisations move beyond experimentation to scalable, enterprise-wide AI transformation.'
       ]
     },
     keyBenefits: [
-      'Enterprise AI Governance & IP Compliance',
-      'C-Suite AI Readiness & Security Audit',
-      'Data Infrastructure & ERP Data Cleanse',
-      'High-ROI Agentic Use Case Prioritization',
-      'Manufacturing & Supply Chain AI Pilots',
-      'AI Capex & Return Metrics Framework'
+      'Enterprise AI Strategy & Governance',
+      'AI Readiness & Data Maturity Assessments',
+      'Responsible AI, Security & Risk Management',
+      'High-Value AI Use Case Identification & Prioritisation',
+      'Manufacturing & Supply Chain AI Strategy',
+      'AI Roadmap, Investment Prioritisation & Value Realisation'
     ],
     deliverables: [
       { title: 'Enterprise AI Governance Framework', description: 'Risk controls, IP security protocols, and compliance guardrails for corporate AI adoption.' },
@@ -305,27 +309,27 @@ export const servicesData: ServiceData[] = [
   },
   {
     id: 'ipo-readiness',
-    slug: 'ipo-readiness-compliance',
-    title: 'IPO Readiness & Compliance',
-    subtitle: 'Governance & Auditability',
+    slug: 'ipo-readiness',
+    title: 'IPO Readiness & Compliance Assessment',
+    subtitle: 'Building Investor Confidence Through Strong Technology Governance',
     iconName: 'FileCheck2',
     shortCopy: 'Strengthen IT governance, validate enterprise systems, and reduce technology risk to support a successful public listing.',
-    heroSubheading: 'Enhance IT governance, controls, and compliance frameworks to build investor confidence and secure your IPO timeline.',
+    heroSubheading: 'Building Investor Confidence Through Strong Technology Governance',
     overview: {
-      headline: 'Investor-Grade Technology Governance & Controls',
+      headline: 'IPO Readiness & Compliance Assessment',
       paragraphs: [
-        'Transitioning to a public company requires a quantum leap in IT governance, regulatory compliance, and system reliability. Catalix Global provides independent advisory to prepare your enterprise systems, data pipelines, and internal controls for rigorous auditor scrutiny.',
-        'We systematically evaluate IT general controls (ITGC), cybersecurity risk profiles, and business-critical data integrity. By bridging the gap between technical operations and financial audit requirements, we eliminate compliance bottlenecks before they threaten your IPO timeline.',
-        'Our Managing Partners sit on your side of the table, eliminating vendor bias and delivering pragmatic governance frameworks built to withstand public market scrutiny.'
+        'A successful IPO requires more than financial readiness. It demands robust technology governance, resilient enterprise systems, effective internal controls, and a compliance framework that inspires confidence among investors, auditors, and regulators.',
+        'Catalix Global helps organisations prepare for public market expectations by strengthening IT governance, cybersecurity, enterprise controls, data integrity, and regulatory compliance. We work alongside executive leadership to identify risks, close control gaps, and establish governance frameworks that support a successful IPO and long-term corporate performance.',
+        'Our independent, vendor-neutral advisory ensures your technology environment is aligned with governance, audit, and compliance requirements, enabling a smoother IPO journey while protecting enterprise value.'
       ]
     },
     keyBenefits: [
-      'Strengthen IT Governance & IPO Readiness',
-      'Reduce Technology & Cybersecurity Risk',
-      'Validate Enterprise Systems & Data Integrity',
-      'Provide Executive Advisory & Board Guidance',
-      'Prepare IT General Controls (ITGC) & SOX Auditability',
-      'Independent Underwriter & Auditor Interface'
+      'IPO Technology Readiness & Governance Assessment',
+      'IT Governance, Risk & Compliance (IT GRC)',
+      'IT General Controls (ITGC) & SOX Readiness',
+      'Cybersecurity, Data Integrity & Technology Risk Assessments',
+      'Executive & Board Advisory for Technology Governance',
+      'Independent Audit, Underwriter & Regulatory Readiness Support'
     ],
     deliverables: [
       { title: 'IT Governance & IPO Readiness Assessment', description: 'Comprehensive audit of IT general controls (ITGC) and governance frameworks against public-company standards.' },
@@ -763,7 +767,7 @@ export const homepageOutcomes = [
     metric: '18-28% Capital Unlock',
     title: 'Reduce Inventory',
     iconName: 'Boxes' as const,
-    copy: 'Harmonize demand forecasting with production planning to eliminate safety stock buffer inflation and release millions in tied-up working capital.',
+    copy: 'Optimise demand forecasting and production planning to reduce excess inventory and unlock working capital.',
     businessImpact: 'Improves cash flow velocity and warehouse holding efficiency.'
   },
   {
@@ -771,15 +775,31 @@ export const homepageOutcomes = [
     metric: '+8 to 14% OEE Lift',
     title: 'Improve OEE',
     iconName: 'Gauge' as const,
-    copy: 'Identify micro-stoppages and throughput bottlenecks by connecting real-time operational technology telemetry with ERP planning.',
+    copy: 'Increase Overall Equipment Effectiveness by identifying production bottlenecks, minimising downtime, and improving throughput.',
     businessImpact: 'Adds productive capacity without expensive capital investments.'
   },
   {
     id: 'planning',
     metric: '95%+ S&OP Accuracy',
-    title: 'Optimize Planning',
+    title: 'Optimise Planning',
     iconName: 'TrendingUp' as const,
-    copy: 'Synchronize multi-site Sales & Operations Planning to align sales commitments with true factory constraints and material availability.',
+    copy: 'Align Sales & Operations Planning (S&OP) with factory capacity, demand, and material availability for predictable execution.',
     businessImpact: 'Prevents stockouts and stabilizes production scheduling.'
+  },
+  {
+    id: 'manufacturing-costs',
+    metric: 'EBITDA Expansion',
+    title: 'Reduce Manufacturing Costs',
+    iconName: 'Coins' as const,
+    copy: 'Improve resource utilisation, minimise waste, and optimise production processes to enhance profitability.',
+    businessImpact: 'Enhances overall plant EBITDA yield.'
+  },
+  {
+    id: 'on-time-delivery',
+    metric: '98%+ OTIF Score',
+    title: 'Increase On-Time Delivery',
+    iconName: 'Truck' as const,
+    copy: 'Improve production scheduling and supply chain coordination to achieve higher delivery reliability and customer satisfaction.',
+    businessImpact: 'Secures key accounts and retail SLA compliance.'
   }
 ];

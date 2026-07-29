@@ -9,33 +9,33 @@ interface WhyChooseCatalyxProps {
 const pillars = [
   {
     number: '01',
-    title: 'Vendor-neutral',
+    title: 'Independent & Vendor-Neutral',
     description:
-      'No reseller margins or referral fees. Recommendations are driven by your requirements, not our incentives.',
+      'Every recommendation is driven by your business strategy and operational priorities, not software vendors or system integrators.',
   },
   {
     number: '02',
-    title: 'Floor-to-boardroom',
+    title: 'From Shop Floor to Boardroom',
     description:
-      'We\'re as comfortable on the shop floor reviewing OEE data as we are presenting a roadmap to the board.',
+      'We combine deep manufacturing expertise with executive leadership, translating operational realities into board-level strategy and investment decisions.',
   },
   {
     number: '03',
-    title: 'Fractional, not junior',
+    title: 'Executive Expertise, On Demand',
     description:
-      'You get senior operator experience part-time — not a junior consultant billing full-time hours.',
+      'Gain the experience of a seasoned CIO/CDO and transformation leader without the cost and commitment of a full-time executive.',
   },
   {
     number: '04',
-    title: 'Focused for Operational Excellence',
+    title: 'Focused on Operational Excellence',
     description:
-      'Our frameworks are grounded in shop-floor MES, inventory velocity, and operational yield — not generic IT theory.',
+      'Our advisory focuses on improving productivity, inventory velocity, asset utilisation, and operational efficiency to deliver sustainable EBITDA',
   },
 ];
 
 export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCatalyxProps) {
   return (
-    <section id="why-us" className="py-16 lg:py-20 bg-brand-navy-dark text-white border-b border-brand-gold/20 relative">
+    <section id="why-us" className="py-[72px] bg-brand-navy-dark text-white border-b border-brand-gold/20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-white/10">
@@ -49,7 +49,7 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
             </h2>
           </div>
           <p className="text-sm sm:text-base text-slate-300 max-w-md mt-4 md:mt-0 leading-relaxed">
-            Independent advisory built for executive leaders who demand strategic clarity, objective governance, and measurable EBITDA returns.
+            Independent strategic advisory for executive leaders who demand objective guidance, strong governance, and measurable business outcomes.
           </p>
         </div>
 

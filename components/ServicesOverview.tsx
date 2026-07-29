@@ -15,7 +15,7 @@ const iconMap = {
 
 export default function ServicesOverview() {
   return (
-    <section id="services" className="py-24 bg-brand-cream/50 border-b border-brand-navy/10">
+    <section id="services" className="py-[72px] bg-brand-cream/50 border-b border-brand-navy/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-brand-navy/10">

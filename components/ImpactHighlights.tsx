@@ -1,23 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-import { Boxes, Gauge, TrendingUp, ArrowRight } from 'lucide-react';
+import { Boxes, Gauge, TrendingUp, ArrowRight, Coins, Truck } from 'lucide-react';
 import { homepageOutcomes } from '@/data/siteData';
 
 const iconMap = {
   Boxes,
   Gauge,
   TrendingUp,
+  Coins,
+  Truck,
 };
 
 export default function ImpactHighlights() {
   return (
-    <section id="outcomes" className="py-10 lg:py-14 bg-brand-cream/60 border-b border-brand-navy/10 relative overflow-hidden">
+    <section id="outcomes" className="py-[72px] bg-brand-cream/60 border-b border-brand-navy/10 relative overflow-hidden">
       {/* Background Subtle Accent Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#1A3A52_1px,transparent_1px)] [background-size:32px_32px] opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header (Fix 4: Tighter gap & Fix 5: Prominent kicker badge & subtitle legibility) */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-brand-gold/15 border border-brand-gold/30 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-brand-gold" />
@@ -31,10 +33,10 @@ export default function ImpactHighlights() {
           </p>
         </div>
 
-        {/* 3 Outcome Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        {/* 5 Outcome Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {homepageOutcomes.map((outcome) => {
-            const Icon = iconMap[outcome.iconName];
+            const Icon = iconMap[outcome.iconName] || TrendingUp;
             return (
               <div
                 key={outcome.id}
@@ -69,8 +71,8 @@ export default function ImpactHighlights() {
           })}
         </div>
 
-        {/* Bottom Context Banner */}
-        <div className="bg-brand-navy text-white p-6 sm:p-8 rounded-sm border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+        {/* Bottom Context Banner (Commented out as requested) */}
+        {/* <div className="bg-brand-navy text-white p-6 sm:p-8 rounded-sm border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="font-serif font-bold text-lg text-white">
               Want to calculate your exact working capital and EBITDA yield?
@@ -85,7 +87,7 @@ export default function ImpactHighlights() {
           >
             Calculate Yield Now
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

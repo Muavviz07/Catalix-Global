@@ -5,9 +5,9 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import ImpactHighlights from '@/components/ImpactHighlights';
-import GeneralEstimator from '@/components/GeneralEstimator';
+// import GeneralEstimator from '@/components/GeneralEstimator';
 import WhyChooseCatalyx from '@/components/WhyChooseCatalyx';
-import AIAdvisorySection from '@/components/AIAdvisorySection';
+// import AIAdvisorySection from '@/components/AIAdvisorySection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import ConsultationModal from '@/components/ConsultationModal';
@@ -33,12 +33,12 @@ export default function HomePage() {
         <Hero onOpenConsultation={() => handleOpenConsultation('Executive Consultation')} />
         <Services onOpenConsultation={handleOpenConsultation} />
         <ImpactHighlights />
-        <GeneralEstimator onOpenConsultation={handleOpenConsultation} />
+        {/* <GeneralEstimator onOpenConsultation={handleOpenConsultation} /> */}
         <WhyChooseCatalyx onOpenConsultation={handleOpenConsultation} />
-        <AIAdvisorySection
+        {/* <AIAdvisorySection
           onOpenConsultation={handleOpenConsultation}
           onOpenRoadmap={() => setRoadmapOpen(true)}
-        />
+        /> */}
         <CTASection onOpenConsultation={handleOpenConsultation} />
       </main>
 

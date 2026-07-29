@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenConsultation }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] pt-32 pb-20 flex items-center justify-center overflow-hidden bg-brand-cream border-b border-brand-navy/5">
+    <section className="relative min-h-[85vh] pt-32 pb-16 flex items-center justify-center overflow-hidden bg-brand-cream border-b border-brand-navy/5">
       {/* Refined Geometric Background Signature */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-35">
         <div
@@ -38,21 +38,20 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           {/* Editorial Kicker */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/35 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-6 shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-brand-gold" />
-            <span>Fractional CIO · CDO · AI Advisory</span>
+            <span>CATALYSING INTELLIGENT ENTERPRISE TRANSFORMATION</span>
           </div>
 
-          {/* Headline */}
           <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.15] mb-6">
-            Catalysing Intelligent{' '}
+            Executive Technology Leadership.{' '}
             <span className="relative inline-block text-brand-navy">
-              Enterprise Transformation
+              Strategic Business Outcomes.
               <span className="absolute bottom-1 left-0 w-full h-1 bg-brand-gold/60"></span>
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-brand-text/90 font-normal leading-relaxed max-w-2.5xl mb-10">
-            We give manufacturing and industrial businesses the technology leadership, ERP discipline, and AI judgment of a full executive team — without the full-time overhead.
+            We help manufacturing and industrial businesses accelerate growth, optimise operations, and build future-ready enterprises through independent strategic advisory.
           </p>
 
           {/* Dual CTAs */}
