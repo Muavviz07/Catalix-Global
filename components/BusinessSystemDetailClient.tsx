@@ -31,7 +31,7 @@ export default function BusinessSystemDetailClient({
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-24 pb-12">
+      <main className="pt-24 pb-0">
         {/* 1. Hero */}
         <section className="bg-brand-cream border-b border-brand-navy/10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

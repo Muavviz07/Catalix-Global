@@ -157,9 +157,9 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
     <section id="services" className="py-8 bg-white border-b border-brand-navy/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-5 border-b border-brand-navy/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 pb-2.5 border-b border-brand-navy/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-brand-gold/15 border border-brand-gold/30 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-brand-gold/15 border border-brand-gold/30 text-xs sm:text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-2">
               <span className="w-2 h-2 rounded-full bg-brand-gold" />
               <span>STRATEGIC PRACTICE AREAS</span>
             </div>
@@ -167,13 +167,13 @@ export default function Services({ onOpenConsultation }: ServicesProps) {
               Our Services
             </h2>
           </div>
-          <p className="text-base sm:text-lg text-brand-navy/90 font-medium max-w-md mt-4 md:mt-0 leading-relaxed">
+          <p className="text-base sm:text-lg text-brand-navy/90 font-medium max-w-md mt-3 md:mt-0 leading-relaxed">
             Independent, executive-level consulting designed to steer high-stakes digital and technology evolutions.
           </p>
         </div>
 
         {/* 1. Practice Selector: 6-Column Non-Scrolling Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-6 gap-2 mb-8">
+        <div className="hidden md:grid md:grid-cols-6 gap-2 mb-4">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isActive = activeTab === index;

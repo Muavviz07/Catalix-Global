@@ -1,6 +1,6 @@
 'use client';
 
-import { ShieldCheck, ArrowRight } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 interface WhyChooseCatalyxProps {
   onOpenConsultation: (topic: string) => void;
@@ -38,9 +38,9 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
     <section id="why-us" className="py-8 bg-brand-cream/60 text-brand-navy border-b border-brand-navy/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-brand-navy/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 pb-3 border-b border-brand-navy/10">
           <div>
-            <div className="flex items-center gap-2 text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-3">
+            <div className="flex items-center gap-2 text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-2">
               <span className="w-2 h-2 rounded-full bg-brand-gold" />
               <span>THE CATALIX DIFFERENCE</span>
             </div>
@@ -48,26 +48,26 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
               Why Choose Catalix
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-brand-navy/90 max-w-md mt-4 md:mt-0 leading-relaxed font-medium">
+          <p className="text-sm sm:text-base text-brand-navy/90 max-w-md mt-3 md:mt-0 leading-relaxed font-medium">
             Independent strategic advisory for executive leaders who demand objective guidance, strong governance, and measurable business outcomes.
           </p>
         </div>
 
         {/* 4 Equal Columns with Top/Bottom Horizontal Borders & Vertical Divides */}
-        <div className="border-y border-brand-navy/15 divide-y md:divide-y-0 md:divide-x divide-brand-navy/15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="border-y border-brand-navy/15 divide-y md:divide-y-0 md:divide-x divide-brand-navy/15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-6">
           {pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="p-6 sm:p-8 group hover:bg-white transition-all duration-300 flex flex-col justify-between"
+              className="p-5 sm:p-6 group hover:bg-white transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Number Square Outline Box */}
-                <div className="w-8 h-8 flex items-center justify-center border border-brand-gold/60 text-brand-gold font-mono text-xs font-bold mb-5 rounded-xs group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors">
+                <div className="w-7 h-7 flex items-center justify-center border border-brand-gold/60 text-brand-gold font-mono text-xs font-bold mb-3 rounded-xs group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors">
                   {pillar.number}
                 </div>
 
                 {/* Bold Title */}
-                <h3 className="font-serif font-bold text-xl sm:text-2xl text-brand-navy group-hover:text-brand-gold transition-colors mb-3 leading-snug">
+                <h3 className="font-serif font-bold text-lg sm:text-xl text-brand-navy group-hover:text-brand-gold transition-colors mb-2 leading-snug">
                   {pillar.title}
                 </h3>
 
@@ -76,24 +76,18 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
                   {pillar.description}
                 </p>
               </div>
-
-              <div className="pt-5 mt-5 border-t border-brand-navy/10 flex items-center justify-between text-xs font-bold text-brand-navy group-hover:text-brand-gold group-hover:underline">
-                <span>Inquire Strategy</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Executive Governance Assurance Strip */}
         <div className="bg-brand-navy text-white p-6 sm:p-8 rounded-sm border border-brand-gold/30 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-brand-gold flex-shrink-0" />
-            <div className="space-y-0.5">
-              <h4 className="font-serif font-bold text-base text-white">
+          <div className="flex items-center gap-4">
+            <ShieldCheck className="w-8 h-8 text-brand-gold flex-shrink-0" />
+            <div className="space-y-1">
+              <h4 className="font-serif font-bold text-xl sm:text-2xl text-white">
                 100% Client P&L Aligned Advisory
               </h4>
-              <p className="text-xs text-slate-300">
+              <p className="text-sm sm:text-base text-slate-200">
                 Zero software reseller bias. Direct Managing Partner oversight for every client engagement.
               </p>
             </div>

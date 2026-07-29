@@ -57,7 +57,7 @@ export default function ServiceDetailClient({
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-24 pb-12">
+      <main className="pt-24 pb-0">
         {/* 1. Page Hero */}
         <section className="bg-brand-cream border-b border-brand-navy/10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +143,7 @@ export default function ServiceDetailClient({
         <section className="py-8 bg-brand-cream/40 border-b border-brand-navy/10 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-brand-navy/10">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-4 pb-2.5 border-b border-brand-navy/10">
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-brand-gold uppercase mb-1">
                   <Sparkles className="w-4 h-4 text-brand-gold" />
@@ -159,7 +159,7 @@ export default function ServiceDetailClient({
             </div>
 
             {/* Horizontal Accordion Container */}
-            <div className="flex flex-col lg:flex-row gap-3 h-auto lg:h-[440px] mb-8">
+            <div className="flex flex-col lg:flex-row gap-3 h-auto lg:h-[270px] mb-4">
               {service.deliverables.map((item, idx) => {
                 const stageNum = String(idx + 1).padStart(2, '0');
                 const isExpanded = expandedIndex === idx;
@@ -169,10 +169,10 @@ export default function ServiceDetailClient({
                     key={idx}
                     onMouseEnter={() => setExpandedIndex(idx)}
                     onClick={() => setExpandedIndex(idx)}
-                    className={`rounded-sm transition-all duration-500 ease-out cursor-pointer relative overflow-hidden h-[420px] lg:h-full flex flex-col justify-between ${
+                    className={`rounded-sm transition-all duration-500 ease-out cursor-pointer relative overflow-hidden h-auto min-h-[270px] lg:h-full flex flex-col justify-between ${
                       isExpanded
-                        ? 'lg:flex-[3.5] bg-brand-navy text-white border-2 border-brand-gold shadow-2xl p-7 sm:p-8'
-                        : 'lg:flex-[1] bg-white text-brand-navy border border-brand-navy/10 hover:border-brand-gold/60 hover:bg-brand-cream/30 p-6'
+                        ? 'lg:flex-[3.5] bg-brand-navy text-white border-2 border-brand-gold shadow-2xl p-4 sm:p-5'
+                        : 'lg:flex-[1] bg-white text-brand-navy border border-brand-navy/10 hover:border-brand-gold/60 hover:bg-brand-cream/30 p-3.5 sm:p-4'
                     }`}
                   >
                     {/* Top Accent Line */}
@@ -184,15 +184,15 @@ export default function ServiceDetailClient({
 
                     {/* EXPANDED CONTENT VIEW */}
                     <div
-                      className={`transition-opacity duration-300 ease-in-out h-full flex flex-col justify-between space-y-4 ${
+                      className={`transition-opacity duration-300 ease-in-out h-full flex flex-col justify-between space-y-2 ${
                         isExpanded
-                          ? 'opacity-100 delay-150 pointer-events-auto relative z-10'
-                          : 'opacity-0 delay-0 pointer-events-none absolute inset-6 overflow-hidden'
+                          ? 'opacity-100 delay-100 pointer-events-auto relative z-10'
+                          : 'opacity-0 delay-0 pointer-events-none absolute inset-4 overflow-hidden'
                       }`}
                     >
-                      <div className="space-y-3">
+                      <div className="space-y-1.5">
                         <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-brand-gold text-brand-navy px-2.5 py-1 rounded-xs">
+                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-brand-gold text-brand-navy px-2.5 py-0.5 rounded-xs">
                             STAGE {stageNum} — {stageSubtitles[idx]}
                           </span>
                           <span className="text-[10px] font-mono text-slate-300">
@@ -200,15 +200,15 @@ export default function ServiceDetailClient({
                           </span>
                         </div>
 
-                        <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white leading-tight">
+                        <h3 className="font-serif font-bold text-xl sm:text-2xl text-white leading-tight">
                           {stageNum}. {item.title}
                         </h3>
 
-                        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-xl">
+                        <p className="text-xs sm:text-sm text-slate-200 leading-snug max-w-xl">
                           {item.description}
                         </p>
 
-                        <div className="space-y-2 pt-2 text-xs text-slate-200 font-medium">
+                        <div className="space-y-1 pt-0.5 text-xs text-slate-200 font-medium">
                           <div className="flex items-center gap-2">
                             <Check className="w-3.5 h-3.5 text-brand-gold flex-shrink-0" />
                             <span>Independent Managing Partner audit & milestone review</span>
@@ -220,7 +220,7 @@ export default function ServiceDetailClient({
                         </div>
                       </div>
 
-                      <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                      <div className="pt-2 border-t border-white/10 flex items-center justify-between mt-auto">
                         <div className="flex items-center gap-1.5 text-xs text-brand-gold font-bold">
                           <FileCheck2 className="w-4 h-4" />
                           <span>Partner Validated Scope</span>
@@ -230,7 +230,7 @@ export default function ServiceDetailClient({
                             e.stopPropagation();
                             handleOpenConsultation(`${service.title} - Stage ${stageNum}: ${item.title}`);
                           }}
-                          className="px-4 py-2 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-xs flex items-center gap-1"
+                          className="px-4 py-1.5 bg-brand-gold hover:bg-brand-gold-hover text-brand-navy font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-xs flex items-center gap-1"
                         >
                           <span>Schedule Stage {stageNum}</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -242,23 +242,23 @@ export default function ServiceDetailClient({
                     <div
                       className={`transition-opacity duration-200 ease-in-out h-full flex flex-col justify-between ${
                         isExpanded
-                          ? 'opacity-0 pointer-events-none absolute inset-6 overflow-hidden'
+                          ? 'opacity-0 pointer-events-none absolute inset-4 overflow-hidden'
                           : 'opacity-100 pointer-events-auto relative z-10'
                       }`}
                     >
                       <div>
-                        <span className="font-serif font-bold text-3xl text-brand-gold block mb-2">
+                        <span className="font-serif font-bold text-2xl text-brand-gold block mb-0.5">
                           {stageNum}
                         </span>
-                        <span className="text-[10px] font-mono font-bold text-brand-navy/60 uppercase tracking-wider block mb-2">
+                        <span className="text-[10px] font-mono font-bold text-brand-navy/60 uppercase tracking-wider block mb-1">
                           STAGE {stageNum}
                         </span>
-                        <h4 className="font-serif font-bold text-sm text-brand-navy leading-snug line-clamp-3">
+                        <h4 className="font-serif font-bold text-xs text-brand-navy leading-snug line-clamp-3">
                           {item.title}
                         </h4>
                       </div>
 
-                      <div className="pt-4 border-t border-brand-navy/10 flex items-center justify-between text-[10px] font-mono font-bold text-brand-gold">
+                      <div className="pt-2 border-t border-brand-navy/10 flex items-center justify-between text-[10px] font-mono font-bold text-brand-gold mt-auto">
                         <span>EXPAND</span>
                         <span>→</span>
                       </div>
@@ -269,7 +269,7 @@ export default function ServiceDetailClient({
             </div>
 
             {/* Compact Bottom Governance Strip */}
-            <div className="bg-brand-navy text-white p-5 rounded-sm border border-brand-gold/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div className="bg-brand-navy text-white p-4 rounded-sm border border-brand-gold/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="w-5 h-5 text-brand-gold flex-shrink-0" />
                 <span className="text-slate-200">
@@ -286,8 +286,8 @@ export default function ServiceDetailClient({
           </div>
         </section>
 
-        {/* 4. Service-Specific Estimator */}
-        <section className="py-8 bg-white border-b border-brand-navy/10">
+        {/* 4. Service-Specific Estimator (Commented Out) */}
+        {/* <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ServiceEstimator
               estimator={service.estimator}
@@ -295,13 +295,12 @@ export default function ServiceDetailClient({
               onOpenConsultation={handleOpenConsultation}
             />
           </div>
-        </section>
+        </section> */}
 
-        {/* 5. Industry Applicability */}
-        {displaySectors.length > 0 && (
+        {/* 5. Industry Applicability (Commented Out) */}
+        {/* {displaySectors.length > 0 && (
           <section className="py-8 bg-white border-b border-brand-navy/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* Header */}
               <div className="max-w-3xl mb-12 space-y-2">
                 <div className="text-xs font-mono font-bold text-brand-gold uppercase tracking-wider">
                   TARGET SECTORS & DOMAIN RELEVANCE
@@ -314,7 +313,6 @@ export default function ServiceDetailClient({
                 </p>
               </div>
 
-              {/* Reference Image Layout */}
               <div className="border-y border-brand-navy/15 divide-y md:divide-y-0 md:divide-x divide-brand-navy/15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {displaySectors.map((sec, idx) => {
                   const cardNum = String(idx + 1).padStart(2, '0');
@@ -348,7 +346,7 @@ export default function ServiceDetailClient({
               </div>
             </div>
           </section>
-        )}
+        )} */}
 
         {/* 6. Creative & Professional Executive CTA Banner */}
         <section className="py-8 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">

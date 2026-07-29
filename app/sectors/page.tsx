@@ -38,7 +38,7 @@ export default function SectorsHubPage() {
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-24 pb-12">
+      <main className="pt-24 pb-0">
         {/* 1. Header Hero */}
         <section className="bg-brand-cream pb-16 border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

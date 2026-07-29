@@ -19,8 +19,8 @@ export default function CTASection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Kicker */}
-          <div className="inline-flex items-center gap-2 text-sm font-mono font-bold text-brand-gold uppercase tracking-wider bg-white/5 px-3.5 py-1.5 rounded-full border border-brand-gold/30">
-            <Sparkles className="w-4 h-4 text-brand-gold" />
+          <div className="inline-flex items-center gap-2.5 text-base sm:text-lg font-mono font-bold text-brand-gold uppercase tracking-wider bg-white/5 px-5 py-2 rounded-full border border-brand-gold/30">
+            <Sparkles className="w-5 h-5 text-brand-gold" />
             <span>START THE CONVERSATION</span>
           </div>
 
