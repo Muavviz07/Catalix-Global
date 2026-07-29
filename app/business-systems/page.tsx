@@ -34,7 +34,7 @@ export default function BusinessSystemsHubPage() {
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-32 pb-[72px]">
+      <main className="pt-24 pb-12">
         {/* 1. Header Hero */}
         <section className="bg-brand-cream pb-16 border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +74,7 @@ export default function BusinessSystemsHubPage() {
         </section>
 
         {/* 2. Unique Platform Spectrum Cards (Full Horizontal Platform Showcase) */}
-        <section className="py-[72px] bg-white border-b border-brand-navy/10">
+        <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between pb-4 border-b border-brand-navy/10">
               <div>

@@ -33,7 +33,7 @@ export default function SectorDetailClient({
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-32 pb-24">
+      <main className="pt-24 pb-12">
         {/* 1. Sector Hero */}
         <section className="bg-brand-cream border-b border-brand-navy/10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ export default function SectorDetailClient({
         </section>
 
         {/* 2. Industry Challenges */}
-        <section className="py-[72px] bg-white border-b border-brand-navy/10">
+        <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12 space-y-2">
               <div className="text-xs font-mono font-bold text-brand-gold uppercase tracking-wider">
@@ -118,7 +118,7 @@ export default function SectorDetailClient({
         </section>
 
         {/* 3. Catalix Approach for Sector */}
-        <section className="py-[72px] bg-brand-cream/40 border-b border-brand-navy/10">
+        <section className="py-8 bg-brand-cream/40 border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 space-y-6">
@@ -162,7 +162,7 @@ export default function SectorDetailClient({
         </section>
 
         {/* 4. Enterprise Systems Used */}
-        <section className="py-[72px] bg-white border-b border-brand-navy/10">
+        <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-10 space-y-2">
               <div className="text-xs font-mono font-bold text-brand-gold uppercase tracking-wider">
@@ -196,7 +196,7 @@ export default function SectorDetailClient({
         </section>
 
         {/* 5. Executive Sector CTA Banner */}
-        <section className="py-[72px] bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">
+        <section className="py-8 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">
           {/* Subtle Radial Glow & Background Grid */}
           <div className="absolute top-1/2 right-10 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />

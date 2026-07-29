@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenConsultation }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] pt-32 pb-16 flex items-center justify-center overflow-hidden bg-brand-cream border-b border-brand-navy/5">
+    <section className="relative min-h-[85vh] pt-32 pb-24 flex items-center justify-center overflow-hidden bg-brand-cream border-b border-brand-navy/5">
       {/* Refined Geometric Background Signature */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-35">
         <div
@@ -110,7 +110,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
       {/* Scroll Down Prompt */}
       <a
         href="#services"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-xs font-medium text-brand-text/60 hover:text-brand-navy transition-colors"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-xs font-medium text-brand-text/60 hover:text-brand-navy transition-colors"
         aria-label="Scroll to services"
       >
         <span>EXPLORE SERVICES</span>

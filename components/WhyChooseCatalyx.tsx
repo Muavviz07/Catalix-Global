@@ -35,30 +35,30 @@ const pillars = [
 
 export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCatalyxProps) {
   return (
-    <section id="why-us" className="py-[72px] bg-brand-navy-dark text-white border-b border-brand-gold/20 relative">
+    <section id="why-us" className="py-8 bg-brand-cream/60 text-brand-navy border-b border-brand-navy/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-brand-navy/10">
           <div>
-            <div className="flex items-center gap-2 text-sm font-mono font-bold tracking-widest text-brand-gold uppercase mb-3">
+            <div className="flex items-center gap-2 text-sm font-mono font-bold tracking-widest text-brand-navy uppercase mb-3">
               <span className="w-2 h-2 rounded-full bg-brand-gold" />
               <span>THE CATALIX DIFFERENCE</span>
             </div>
-            <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            <h2 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-navy">
               Why Choose Catalix
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-slate-300 max-w-md mt-4 md:mt-0 leading-relaxed">
+          <p className="text-sm sm:text-base text-brand-navy/90 max-w-md mt-4 md:mt-0 leading-relaxed font-medium">
             Independent strategic advisory for executive leaders who demand objective guidance, strong governance, and measurable business outcomes.
           </p>
         </div>
 
         {/* 4 Equal Columns with Top/Bottom Horizontal Borders & Vertical Divides */}
-        <div className="border-y border-white/15 divide-y md:divide-y-0 md:divide-x divide-white/15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="border-y border-brand-navy/15 divide-y md:divide-y-0 md:divide-x divide-brand-navy/15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
           {pillars.map((pillar) => (
             <div
               key={pillar.number}
-              className="p-6 sm:p-8 group hover:bg-white/5 transition-all duration-300 flex flex-col justify-between"
+              className="p-6 sm:p-8 group hover:bg-white transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Number Square Outline Box */}
@@ -67,17 +67,17 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
                 </div>
 
                 {/* Bold Title */}
-                <h3 className="font-serif font-bold text-xl sm:text-2xl text-white group-hover:text-brand-gold transition-colors mb-3 leading-snug">
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-brand-navy group-hover:text-brand-gold transition-colors mb-3 leading-snug">
                   {pillar.title}
                 </h3>
 
                 {/* Description Copy */}
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-navy/80 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-gold group-hover:underline">
+              <div className="pt-5 mt-5 border-t border-brand-navy/10 flex items-center justify-between text-xs font-bold text-brand-navy group-hover:text-brand-gold group-hover:underline">
                 <span>Inquire Strategy</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -86,7 +86,7 @@ export default function WhyChooseCatalyx({ onOpenConsultation }: WhyChooseCataly
         </div>
 
         {/* Bottom Executive Governance Assurance Strip */}
-        <div className="bg-white/5 text-white p-6 sm:p-8 rounded-sm border border-brand-gold/30 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-brand-navy text-white p-6 sm:p-8 rounded-sm border border-brand-gold/30 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-brand-gold flex-shrink-0" />
             <div className="space-y-0.5">

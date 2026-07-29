@@ -12,7 +12,7 @@ export default function CTASection({
   onOpenRoadmapModal,
 }: CTASectionProps) {
   return (
-    <section className="relative py-[72px] bg-brand-navy text-white overflow-hidden border-t-2 border-brand-gold">
+    <section className="relative py-8 bg-brand-navy text-white overflow-hidden border-t-2 border-brand-gold">
       {/* Background Radial Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
 

@@ -57,7 +57,7 @@ export default function ServiceDetailClient({
     <div className="min-h-screen bg-brand-cream text-brand-navy">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-32 pb-24">
+      <main className="pt-24 pb-12">
         {/* 1. Page Hero */}
         <section className="bg-brand-cream border-b border-brand-navy/10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +106,7 @@ export default function ServiceDetailClient({
         </section>
 
         {/* 2. Service Overview & Benefits */}
-        <section className="py-[72px] bg-white border-b border-brand-navy/10">
+        <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Left Overview Column */}
@@ -140,7 +140,7 @@ export default function ServiceDetailClient({
         </section>
 
         {/* 3. Service Scope — Horizontal Expandable Accordion Strip */}
-        <section className="py-[72px] bg-brand-cream/40 border-b border-brand-navy/10 relative overflow-hidden">
+        <section className="py-8 bg-brand-cream/40 border-b border-brand-navy/10 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-brand-navy/10">
@@ -287,7 +287,7 @@ export default function ServiceDetailClient({
         </section>
 
         {/* 4. Service-Specific Estimator */}
-        <section className="py-[72px] bg-white border-b border-brand-navy/10">
+        <section className="py-8 bg-white border-b border-brand-navy/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ServiceEstimator
               estimator={service.estimator}
@@ -299,7 +299,7 @@ export default function ServiceDetailClient({
 
         {/* 5. Industry Applicability */}
         {displaySectors.length > 0 && (
-          <section className="py-[72px] bg-white border-b border-brand-navy/10">
+          <section className="py-8 bg-white border-b border-brand-navy/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Header */}
               <div className="max-w-3xl mb-12 space-y-2">
@@ -351,7 +351,7 @@ export default function ServiceDetailClient({
         )}
 
         {/* 6. Creative & Professional Executive CTA Banner */}
-        <section className="py-[72px] bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">
+        <section className="py-8 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-dark text-white border-t border-brand-gold/30 relative overflow-hidden">
           {/* Subtle Radial Glow & Background Grid */}
           <div className="absolute top-1/2 right-10 -translate-y-1/2 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />

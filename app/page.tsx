@@ -32,7 +32,7 @@ export default function HomePage() {
       <main>
         <Hero onOpenConsultation={() => handleOpenConsultation('Executive Consultation')} />
         <Services onOpenConsultation={handleOpenConsultation} />
-        <ImpactHighlights />
+        <ImpactHighlights onOpenConsultation={handleOpenConsultation} />
         {/* <GeneralEstimator onOpenConsultation={handleOpenConsultation} /> */}
         <WhyChooseCatalyx onOpenConsultation={handleOpenConsultation} />
         {/* <AIAdvisorySection
