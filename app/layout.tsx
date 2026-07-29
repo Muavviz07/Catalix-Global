@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Catalix Global' }],
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/logo-catalix.png',
+    shortcut: '/logo-catalix.png',
+    apple: '/logo-catalix.png',
   },
   openGraph: {
     title: 'Catalix Global | Intelligent Transformation Consulting',
