@@ -89,6 +89,12 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
             >
               Our Approach
             </Link>
+            <Link
+              href="/blogs"
+              className="text-base font-semibold text-slate-200 hover:text-brand-gold transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300"
+            >
+              Blogs
+            </Link>
             <NavDropdown
               label="Industries We Serve"
               items={sectorsDropdownItems}
@@ -197,6 +203,17 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                   className="block py-2 text-sm font-bold text-brand-navy hover:text-brand-gold"
                 >
                   Our Approach
+                </Link>
+              </div>
+
+              {/* 4. Blogs */}
+              <div className="border-b border-brand-navy/10 pb-2">
+                <Link
+                  href="/blogs"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-2 text-sm font-bold text-brand-navy hover:text-brand-gold"
+                >
+                  Blogs
                 </Link>
               </div>
 

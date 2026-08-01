@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Crimson_Text, Inter } from 'next/font/google';
 import './globals.css';
+import ChatbotWidget from '@/components/ChatbotWidget';
 
 const crimsonText = Crimson_Text({
   subsets: ['latin'],
@@ -8,6 +9,7 @@ const crimsonText = Crimson_Text({
   style: ['normal', 'italic'],
   variable: '--font-crimson',
   display: 'swap',
+  fallback: ['Georgia', 'serif'],
 });
 
 const inter = Inter({
@@ -15,6 +17,7 @@ const inter = Inter({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-inter',
   display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
@@ -50,8 +53,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-import ChatbotWidget from '@/components/ChatbotWidget';
 
 export default function RootLayout({
   children,
