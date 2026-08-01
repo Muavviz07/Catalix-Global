@@ -75,14 +75,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Sidebar */}
       <aside className="w-full md:w-64 bg-brand-navy-dark text-white flex-shrink-0 border-r border-brand-gold/20 flex flex-col justify-between">
         <div>
-          {/* Brand Header */}
-          <div className="p-6 border-b border-brand-gold/20 flex items-center justify-between">
-            <Link href="/admin/blogs">
-              <Logo size="md" variant="light" />
-            </Link>
-            <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-brand-gold bg-brand-gold/15 px-2 py-0.5 rounded border border-brand-gold/30">
-              <ShieldCheck className="w-3 h-3" /> Admin
-            </span>
+          {/* Brand Header with Clean Spaced Admin Badge */}
+          <div className="p-5 border-b border-brand-gold/20 flex flex-col gap-3">
+            <div className="flex items-center justify-between gap-2">
+              <Link href="/admin/blogs" className="block shrink-0">
+                <Logo size="md" variant="light" />
+              </Link>
+              <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold text-brand-gold bg-brand-gold/15 px-2.5 py-1 rounded border border-brand-gold/30 shrink-0">
+                <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" /> Admin
+              </span>
+            </div>
           </div>
 
           {/* Navigation Items */}

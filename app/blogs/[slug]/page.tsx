@@ -82,15 +82,116 @@ export default function BlogDetailPage() {
     return `${minutes} min read`;
   };
 
+  // Full-Page Executive Skeleton Loader Effect for Hero & Content
   if (loading) {
     return (
       <div className="min-h-screen bg-brand-cream text-brand-navy">
         <Navbar onOpenConsultation={handleOpenConsultation} />
+
         <main className="pt-28 pb-0">
-          <div className="py-24 px-4 text-center max-w-2xl mx-auto space-y-4">
-            <div className="w-8 h-8 border-3 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-sm font-semibold text-brand-navy/70">Loading article...</p>
-          </div>
+          {/* Hero Skeleton (Section 1) */}
+          <section className="bg-brand-cream border-b border-brand-navy/10 pt-4 pb-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+              {/* Breadcrumb Skeleton */}
+              <div className="w-48 h-4 bg-slate-300/70 rounded animate-pulse" />
+
+              <div className="max-w-3xl space-y-4 pt-1">
+                {/* Category Badge & Icon Skeleton */}
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded bg-slate-300/80 animate-pulse shrink-0" />
+                  <div className="w-56 h-4 bg-slate-300/70 rounded animate-pulse" />
+                </div>
+
+                {/* Article Title Skeleton (2 Lines) */}
+                <div className="space-y-2">
+                  <div className="w-11/12 sm:w-4/5 h-9 sm:h-12 bg-slate-300/80 rounded animate-pulse" />
+                  <div className="w-3/5 sm:w-2/3 h-9 sm:h-12 bg-slate-300/80 rounded animate-pulse" />
+                </div>
+
+                {/* Excerpt Skeleton (2 Lines) */}
+                <div className="space-y-2 pt-1">
+                  <div className="w-full h-5 bg-slate-300/60 rounded animate-pulse" />
+                  <div className="w-4/5 h-5 bg-slate-300/60 rounded animate-pulse" />
+                </div>
+
+                {/* Meta Line Skeleton */}
+                <div className="pt-4 flex items-center gap-6 border-t border-brand-navy/10">
+                  <div className="w-36 h-4 bg-slate-300/70 rounded animate-pulse" />
+                  <div className="w-24 h-4 bg-slate-300/70 rounded animate-pulse" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Main Content & Sidebar Skeleton (Section 2) */}
+          <section className="bg-white border-b border-brand-navy/10 py-8 sm:py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                {/* Left Article Body Skeleton */}
+                <div className="lg:col-span-8 space-y-8">
+                  {/* First Section Heading Skeleton */}
+                  <div className="w-2/5 h-8 bg-slate-200/90 rounded animate-pulse" />
+
+                  {/* Paragraph 1 Lines */}
+                  <div className="space-y-3">
+                    <div className="w-full h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-11/12 h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-full h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-4/5 h-4 bg-slate-200/70 rounded animate-pulse" />
+                  </div>
+
+                  {/* Subheading Skeleton */}
+                  <div className="w-1/3 h-7 bg-slate-200/80 rounded animate-pulse my-4" />
+
+                  {/* Paragraph 2 Lines */}
+                  <div className="space-y-3">
+                    <div className="w-full h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-full h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-10/12 h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-3/4 h-4 bg-slate-200/70 rounded animate-pulse" />
+                  </div>
+
+                  {/* Blockquote Skeleton */}
+                  <div className="p-4 bg-slate-50 border-l-4 border-slate-300 rounded-r-md space-y-2 animate-pulse">
+                    <div className="w-11/12 h-4 bg-slate-200 rounded" />
+                    <div className="w-3/4 h-4 bg-slate-200 rounded" />
+                  </div>
+
+                  {/* Paragraph 3 Lines */}
+                  <div className="space-y-3 pt-2">
+                    <div className="w-full h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-11/12 h-4 bg-slate-200/70 rounded animate-pulse" />
+                    <div className="w-5/6 h-4 bg-slate-200/70 rounded animate-pulse" />
+                  </div>
+                </div>
+
+                {/* Right Sidebar Skeleton */}
+                <div className="lg:col-span-4 space-y-8">
+                  {/* CTA Box Skeleton */}
+                  <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 space-y-4 animate-pulse">
+                    <div className="w-24 h-3 bg-slate-200 rounded" />
+                    <div className="w-3/4 h-6 bg-slate-200 rounded" />
+                    <div className="w-full h-10 bg-slate-150 rounded" />
+                    <div className="w-full h-10 bg-slate-300 rounded" />
+                  </div>
+
+                  {/* Related Articles Skeleton */}
+                  <div className="space-y-4">
+                    <div className="w-1/2 h-5 bg-slate-200 rounded animate-pulse" />
+                    <div className="space-y-3">
+                      {[1, 2, 3].map((n) => (
+                        <div key={n} className="bg-slate-50 p-4 rounded-md border border-slate-200 space-y-2 animate-pulse">
+                          <div className="w-20 h-3 bg-slate-200 rounded" />
+                          <div className="w-full h-4 bg-slate-200 rounded" />
+                          <div className="w-24 h-3 bg-slate-200 rounded" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>
@@ -128,10 +229,10 @@ export default function BlogDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-cream text-brand-navy">
+    <div className="min-h-screen bg-brand-cream text-brand-navy transition-opacity duration-500 ease-in-out">
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      <main className="pt-28 pb-0">
+      <main className="pt-28 pb-0 animate-fade-in">
         {/* 1. Page Hero Header (Section 1: Brand Cream Shade, Left-Aligned Standard Layout) */}
         <section className="bg-brand-cream border-b border-brand-navy/10 pt-4 pb-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
